@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saif Ur Rahman Khan — Electrical Engineer | EV &amp; Renewable Energy</title>
+  <meta name="description" content="Portfolio of Saif Ur Rahman Khan — Electrical Engineer specializing in E-Mobility, Renewable Energy Systems, and Power Electronics. Pursuing Masters in Europe, Fall 2027." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons: Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo" aria-label="Home">Saif<span>.</span></a>
+
+      <div class="navbar__links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+          <i data-lucide="moon" width="18" height="18"></i>
+        </button>
+      </div>
+
+      <!-- Mobile: theme + hamburger -->
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle light/dark mode" style="display:none">
+          <i data-lucide="moon" width="18" height="18"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <i data-lucide="menu" width="22" height="22"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- ========== SECTION 1 — HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__content">
+          <!-- Animated tag -->
+          <div class="hero__tag gs-reveal">
+            <span class="dot"></span>
+            Open to Masters opportunities — Fall 2027
+          </div>
+
+          <h1 class="gs-reveal">Saif Ur Rahman<br/>Khan</h1>
+
+          <p class="hero__subtitle gs-reveal">
+            Electrical engineer building at the intersection of
+            <strong style="color:var(--text-primary)">e-mobility</strong>,
+            <strong style="color:var(--text-primary)">renewable energy</strong>, and
+            <strong style="color:var(--text-primary)">power systems</strong> — from hydrogen fuel cells to off-grid hybrid microgrids.
+          </p>
+
+          <div class="hero__ctas gs-reveal">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#" class="btn btn--secondary" id="downloadCV">
+              <i data-lucide="download" width="16" height="16"></i>
+              Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Decorative grid -->
+      <div class="hero__grid-accent" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========== SECTION 2 — ABOUT ========== -->
+    <section id="about">
+      <div class="container">
+        <p class="section-label gs-reveal">About</p>
+        <h2 class="gs-reveal">Engineering energy systems<br/>that move us forward.</h2>
+
+        <div class="about__grid" style="margin-top:var(--space-2xl)">
+          <div class="about__text">
+            <p class="gs-reveal">
+              I'm Saif — an electrical engineer from Jamia Millia Islamia, New Delhi, with hands-on experience spanning automotive R&amp;D at <strong style="color:var(--text-primary)">Denso</strong>, power distribution at <strong style="color:var(--text-primary)">Tata Power</strong>, and transformer manufacturing at <strong style="color:var(--text-primary)">Tesla Transformers</strong>. My work sits at the intersection where power electronics meets sustainable mobility.
+            </p>
+            <p class="gs-reveal">
+              From designing a hydrogen fuel cell–powered electric bicycle to optimizing off-grid PV–Wind–Hydrogen microgrids, I've consistently gravitated toward problems that demand systems-level thinking and real-world engineering rigor. My research on deep-learning–based State-of-Charge estimation for EV batteries was presented at an international conference.
+            </p>
+            <p class="gs-reveal">
+              I'm now working toward a <strong style="color:var(--text-primary)">Masters in Renewable Energy / E-Mobility in Europe (Fall 2027)</strong> — to deepen my expertise in electrified powertrains, grid-integrated storage, and the energy transition infrastructure that the next decade demands.
+            </p>
+          </div>
+
+          <div class="about__stats gs-reveal">
+            <div class="stat-card">
+              <div class="stat-card__number">2+</div>
+              <div class="stat-card__label">Years of Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__number">3</div>
+              <div class="stat-card__label">Industry Internships</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__number">1</div>
+              <div class="stat-card__label">Published Paper</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__number">2+</div>
+              <div class="stat-card__label">Major Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 3 — SKILLS ========== -->
+    <section id="skills">
+      <div class="container">
+        <p class="section-label gs-reveal">Skills</p>
+        <h2 class="gs-reveal">Technical toolkit</h2>
+
+        <div class="skills__groups" style="margin-top:var(--space-2xl)">
+
+          <!-- Group 1 -->
+          <div class="skill-group gs-reveal">
+            <div class="skill-group__title">Automation &amp; Engineering Tools</div>
+            <div class="skill-tags">
+              <span class="skill-tag">MATLAB</span>
+              <span class="skill-tag">Simulink</span>
+              <span class="skill-tag">AutoCAD</span>
+              <span class="skill-tag">HOMER Pro</span>
+              <span class="skill-tag">PVsyst</span>
+              <span class="skill-tag">Revit</span>
+              <span class="skill-tag">Siemens NX</span>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="skill-group gs-reveal">
+            <div class="skill-group__title">Electrical &amp; Power Systems</div>
+            <div class="skill-tags">
+              <span class="skill-tag">LV/MV Distribution</span>
+              <span class="skill-tag">SLD Interpretation</span>
+              <span class="skill-tag">Protection Basics</span>
+              <span class="skill-tag">IEC/IS Standards</span>
+              <span class="skill-tag">Power Electronics</span>
+              <span class="skill-tag">BLDC Motor Control</span>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="skill-group gs-reveal">
+            <div class="skill-group__title">Programming &amp; Data</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">MATLAB Scripting</span>
+              <span class="skill-tag">MS Excel</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 4 — PROJECTS ========== -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label gs-reveal">Projects</p>
+        <h2 class="gs-reveal">Selected work</h2>
+
+        <div class="projects__grid" style="margin-top:var(--space-2xl)">
+
+          <!-- Project 1 — from resume -->
+          <article class="project-card gs-reveal">
+            <div class="project-card__year">2025</div>
+            <h3>Hydrogen Fuel Cell–Based Electric Bicycle</h3>
+            <p class="project-card__desc">
+              Designed a BLDC motor–based e-bicycle with controller integration and battery management system. Integrated a PEM fuel cell as an auxiliary power source to extend range and improve system efficiency. Developed system-level electrical interfacing, control logic, and performance evaluation methodology.
+            </p>
+            <div class="project-card__tools">
+              <span class="tool-tag">BLDC</span>
+              <span class="tool-tag">Power Electronics</span>
+              <span class="tool-tag">PEM Fuel Cell</span>
+              <span class="tool-tag">BMS</span>
+            </div>
+          </article>
+
+          <!-- Project 2 — from resume -->
+          <article class="project-card gs-reveal">
+            <div class="project-card__year">2024</div>
+            <h3>Off-Grid Hybrid Renewable Energy System</h3>
+            <p class="project-card__desc">
+              Designed a PV–Wind–Hydrogen hybrid system for reliable rural electrification. Performed techno-economic optimization analysis achieving competitive LCOE and LCOH values using HOMER Pro and MATLAB simulations.
+            </p>
+            <div class="project-card__tools">
+              <span class="tool-tag">HOMER Pro</span>
+              <span class="tool-tag">MATLAB</span>
+              <span class="tool-tag">PV Systems</span>
+              <span class="tool-tag">Hydrogen Storage</span>
+            </div>
+          </article>
+
+          <!-- Project 3 — inferred placeholder -->
+          <article class="project-card gs-reveal">
+            <div class="project-card__year">2025</div>
+            <h3>
+              SoC Estimation of Li-Ion Batteries Using DNN
+              <span class="placeholder-badge">[EDIT THIS]</span>
+            </h3>
+            <p class="project-card__desc">
+              [EDIT THIS] Developed a deep neural network model for real-time State-of-Charge estimation of lithium-ion batteries in electric vehicles. Trained and validated the model on battery cycling datasets to achieve improved estimation accuracy over conventional Coulomb counting methods. Presented findings at IC3ECSBHI-2025.
+            </p>
+            <div class="project-card__tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Deep Learning</span>
+              <span class="tool-tag">Battery Modeling</span>
+              <span class="tool-tag">EV Systems</span>
+            </div>
+          </article>
+
+          <!-- Project 4 — inferred placeholder -->
+          <article class="project-card gs-reveal">
+            <div class="project-card__year">2024</div>
+            <h3>
+              Decentralized Solar Energy Microgrid
+              <span class="placeholder-badge">[EDIT THIS]</span>
+            </h3>
+            <p class="project-card__desc">
+              [EDIT THIS] Conceptualized a decentralized solar microgrid architecture for peer-to-peer energy sharing in urban residential clusters. Analyzed load profiles, inverter sizing, and net-metering compliance under DISCOM regulations. This project won the DTU-Incubate IIF Ideathon 2024.
+            </p>
+            <div class="project-card__tools">
+              <span class="tool-tag">PVsyst</span>
+              <span class="tool-tag">Solar PV</span>
+              <span class="tool-tag">Microgrid Design</span>
+              <span class="tool-tag">Net Metering</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 5 — EXPERIENCE ========== -->
+    <section id="experience">
+      <div class="container">
+        <p class="section-label gs-reveal">Experience</p>
+        <h2 class="gs-reveal">Professional timeline</h2>
+
+        <div class="timeline" style="margin-top:var(--space-2xl)">
+
+          <!-- Experience 1 -->
+          <div class="timeline__item gs-reveal">
+            <div class="timeline__header">
+              <span class="timeline__role">Research and Development Trainee</span>
+              <span class="timeline__duration">Jul 2025 — Present</span>
+            </div>
+            <div class="timeline__company">Denso International India Pvt. Ltd. · Manesar, Haryana</div>
+            <ul class="timeline__bullets">
+              <li>Supported engineering design activities by reviewing system layouts, interfaces, and component placement using Siemens NX.</li>
+              <li>Prepared and maintained structured technical documentation, specifications, and revision-controlled design records.</li>
+              <li>Assisted in drafting and updating 2D drawings with AutoCAD to support internal design communication.</li>
+              <li>Coordinated with cross-functional teams to track design changes, action items, and implementation status.</li>
+              <li>Followed standard engineering processes including quality checks, issue tracking, kaizen, and 5S practices.</li>
+            </ul>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline__item gs-reveal">
+            <div class="timeline__header">
+              <span class="timeline__role">Summer Training Intern</span>
+              <span class="timeline__duration">Jun 2024 — Jul 2024</span>
+            </div>
+            <div class="timeline__company">Tata Power DDL · New Delhi, India</div>
+            <ul class="timeline__bullets">
+              <li>Reviewed electrical layouts and single-line diagrams to support LV/MV distribution planning activities.</li>
+              <li>Assisted in preparing reports, schedules, and documentation using MS Excel and Word for field coordination.</li>
+              <li>Maintained cable records, markups, and revisions supporting design–operate–maintain workflows.</li>
+              <li>Participated in coordination meetings and documented observations related to fault analysis and restoration.</li>
+            </ul>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline__item gs-reveal">
+            <div class="timeline__header">
+              <span class="timeline__role">Industrial Training Intern</span>
+              <span class="timeline__duration">Jun 2023 — Jul 2023</span>
+            </div>
+            <div class="timeline__company">Tesla Transformers (India) Ltd · Bhopal, Madhya Pradesh</div>
+            <ul class="timeline__bullets">
+              <li>Studied design and manufacturing layouts of power transformers including core, winding, insulation, and assembly.</li>
+              <li>Observed integration of electrical components and adherence to quality standards in shop-floor operations.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 6 — EDUCATION & RESEARCH ========== -->
+    <section id="education">
+      <div class="container">
+        <p class="section-label gs-reveal">Education &amp; Research</p>
+        <h2 class="gs-reveal">Academic foundation</h2>
+
+        <div class="education__grid" style="margin-top:var(--space-2xl)">
+
+          <div class="edu-card gs-reveal">
+            <div class="edu-card__degree">B.Tech in Electrical Engineering</div>
+            <div class="edu-card__school">Jamia Millia Islamia University, New Delhi</div>
+            <div class="edu-card__meta">2021 — 2025 · SPI: 8.51 / 10</div>
+          </div>
+
+          <div class="edu-card gs-reveal">
+            <div class="edu-card__degree">Class XII (CBSE)</div>
+            <div class="edu-card__school">Senior Secondary · 94.8%</div>
+            <div class="edu-card__meta">2020 — 2021</div>
+          </div>
+
+          <div class="edu-card gs-reveal">
+            <div class="edu-card__degree">Class X (CBSE)</div>
+            <div class="edu-card__school">Secondary · 92.2%</div>
+            <div class="edu-card__meta">2018 — 2019</div>
+          </div>
+
+          <div class="edu-card gs-reveal">
+            <div class="edu-card__degree">Publication</div>
+            <div class="edu-card__school">IC3ECSBHI-2025 International Conference</div>
+            <div class="edu-card__meta">State-of-Charge Estimation of Li-Ion Battery in EVs Using Deep Neural Network</div>
+          </div>
+
+        </div>
+
+        <!-- Leadership & Achievements -->
+        <div class="sub-section gs-reveal">
+          <h3>Leadership &amp; Achievements</h3>
+          <ul class="achievement-list">
+            <li><strong>Chairperson</strong>, IEEE Power and Energy Society (PES), JMI (2023–2025) — led technical and industry-focused initiatives.</li>
+            <li><strong>Finalist</strong>, Smart India Hackathon 2024 (Hardware Edition), Ministry of Power, Govt. of India.</li>
+            <li><strong>Winner</strong>, Ideathon 2024 on Decentralized Solar Energy Systems, DTU-Incubate IIF.</li>
+          </ul>
+        </div>
+
+        <!-- Research Vision -->
+        <div class="research-vision gs-reveal">
+          <h3>Research Vision <span class="placeholder-badge">[EDIT THIS]</span></h3>
+          <p>
+            [EDIT THIS] My research interests lie at the convergence of electrified transportation and grid-scale renewable integration. Specifically, I want to investigate intelligent battery management systems for next-generation EV powertrains — leveraging machine learning for real-time SoC/SoH estimation and predictive thermal management. I am equally drawn to the challenge of designing resilient hybrid microgrids that couple green hydrogen production with variable renewable sources, enabling sector coupling between mobility and stationary storage. A Masters program in Europe would allow me to work within the regulatory and technological ecosystem that is leading the global energy transition — from Germany's Energiewende to the Netherlands' offshore wind ambitions.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== SECTION 7 — CONTACT ========== -->
+    <section id="contact">
+      <div class="container">
+        <p class="section-label gs-reveal">Contact</p>
+        <h2 class="gs-reveal">Let's connect</h2>
+
+        <div class="contact__grid" style="margin-top:var(--space-2xl)">
+
+          <!-- Contact info -->
+          <div class="gs-reveal">
+            <p style="margin-bottom:var(--space-xl);font-size:1rem;line-height:1.7;color:var(--text-secondary)">
+              I'm actively exploring Masters opportunities in Renewable Energy and E-Mobility at European universities for Fall 2027. Open to research collaborations, academic advising, or engineering conversations.
+            </p>
+
+            <div class="contact__info-list">
+              <div class="contact__info-item">
+                <i data-lucide="mail" width="18" height="18"></i>
+                <a href="mailto:khansaif989341@gmail.com">khansaif989341@gmail.com</a>
+              </div>
+              <div class="contact__info-item">
+                <i data-lucide="phone" width="18" height="18"></i>
+                <span>+91 7389426580</span>
+              </div>
+              <div class="contact__info-item">
+                <i data-lucide="linkedin" width="18" height="18"></i>
+                <a href="https://linkedin.com/in/saif-ur-rahman-khan-a30658230" target="_blank" rel="noopener">
+                  linkedin.com/in/saif-ur-rahman-khan
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact form (UI only) -->
+          <form class="contact-form gs-reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">
+              <i data-lucide="send" width="16" height="16"></i>
+              Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i data-lucide="check-circle" width="20" height="20" style="display:inline;vertical-align:middle;margin-right:8px"></i>
+              Message sent successfully! I'll get back to you soon.
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__text">&copy; 2026 Saif Ur Rahman Khan. All rights reserved.</span>
+      <div class="footer__links">
+        <a href="mailto:khansaif989341@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/saif-ur-rahman-khan-a30658230" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
