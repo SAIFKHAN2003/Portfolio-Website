@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydrogen Fuel Cell E-Bicycle — Saif Ur Rahman Khan</title>
+  <meta name="description" content="Detailed breakdown of the Hydrogen Fuel Cell–Based Electric Bicycle project." />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="project-style.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">Saif<span>.</span></a>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="index.html#projects" class="back-btn">
+          <i data-lucide="arrow-left" width="15" height="15"></i> All Projects
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i data-lucide="moon" width="16" height="16"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="project-hero reveal">
+      <div class="project-hero__category">E-Mobility · Power Electronics</div>
+      <h1>Hydrogen Fuel Cell–Based Electric Bicycle</h1>
+      <div class="project-hero__meta">
+        <div class="meta-item">
+          <span class="meta-item__label">Year</span>
+          <span class="meta-item__value">2025</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Duration</span>
+          <span class="meta-item__value">~6 months</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Role</span>
+          <span class="meta-item__value">Lead Designer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Status</span>
+          <span class="meta-item__value" style="color:var(--accent)">Completed</span>
+        </div>
+      </div>
+      <div class="tags-row">
+        <span class="tool-tag">BLDC Motor</span>
+        <span class="tool-tag">PEM Fuel Cell</span>
+        <span class="tool-tag">BMS</span>
+        <span class="tool-tag">Power Electronics</span>
+        <span class="tool-tag">MATLAB/Simulink</span>
+        <span class="tool-tag">DC-DC Converter</span>
+      </div>
+    </header>
+
+    <!-- SLIDE DECK -->
+    <section class="slideshow-section">
+      <div class="slideshow-wrapper">
+        <p class="section-label">Project Presentation</p>
+        <h2>Technical Slide Deck</h2>
+
+        <!-- Mode Toggle -->
+        <div class="slide-mode-toggle">
+          <button class="slide-mode-btn active" id="modeSlides">
+            <i data-lucide="presentation" width="14" height="14"></i> Summary Slides
+          </button>
+          <button class="slide-mode-btn" id="modePdf">
+            <i data-lucide="file-text" width="14" height="14"></i> Original PPT
+          </button>
+        </div>
+
+        <!-- Summary slides view -->
+        <div class="summary-view" id="summaryView">
+        <div class="slide-progress">
+          <div class="slide-progress__fill" id="progressFill" style="width:16.67%"></div>
+        </div>
+
+        <div class="slide-deck" id="slideDeck">
+
+          <div class="slide slide--cover active">
+            <div class="slide-accent-bar"></div>
+            <h2>Hydrogen Fuel Cell–Based<br/>Electric Bicycle</h2>
+            <p>Extending EV range through PEM fuel cell integration — a systems-level approach to clean urban mobility.</p>
+            <div class="slide-number">01 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Problem Statement</span>
+            <h3>The Range Anxiety Challenge</h3>
+            <p>Conventional Li-ion e-bicycles face limited range, long recharge times, and capacity degradation. A hybrid fuel cell approach can extend effective range while reducing peak battery discharge stress.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">Battery degradation reduces effective range by up to 30% over 3 years</div>
+              <div class="slide-bullet">Recharge time (3–5 hrs) creates operational gaps for multi-trip commuters</div>
+              <div class="slide-bullet">No lightweight auxiliary source exists in current e-bike platforms at low cost</div>
+            </div>
+            <div class="slide-number">02 / 06</div>
+          </div>
+
+          <div class="slide slide--two-col">
+            <div class="slide-accent-bar"></div>
+            <div class="col-left">
+              <span class="slide-title">System Architecture</span>
+              <h3>Hybrid Powertrain Design</h3>
+              <p>A BLDC hub motor is driven by a PWM-controlled ESC. A 48V Li-ion pack provides peak demand, while a PEM fuel cell acts as range extender via a boost DC-DC converter. BMS monitors cell health.</p>
+              <div class="slide-bullets">
+                <div class="slide-bullet">BLDC hub motor — 250W, 48V nominal</div>
+                <div class="slide-bullet">PEM fuel cell — 100W auxiliary source</div>
+                <div class="slide-bullet">Boost converter — 24V FC → 48V bus</div>
+                <div class="slide-bullet">BMS with cell balancing & protection</div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="stat-list">
+                <div class="stat-item"><div class="stat-item__value">48V</div><div class="stat-item__label">DC Bus Voltage</div></div>
+                <div class="stat-item"><div class="stat-item__value">250W</div><div class="stat-item__label">BLDC Motor Rating</div></div>
+                <div class="stat-item"><div class="stat-item__value">100W</div><div class="stat-item__label">PEM Fuel Cell Output</div></div>
+                <div class="stat-item"><div class="stat-item__value">~87%</div><div class="stat-item__label">Boost Converter Efficiency</div></div>
+              </div>
+            </div>
+            <div class="slide-number">03 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Methodology</span>
+            <h3>Design & Simulation Workflow</h3>
+            <p>System modelling was performed in MATLAB/Simulink using the Simscape Electrical toolbox. PEM fuel cell polarization curves were parameterized. A Stateflow state machine managed energy routing (FC activates below 40% SoC).</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">Fuel cell I–V & P–V characterization modelled from datasheet parameters</div>
+              <div class="slide-bullet">Boost converter designed using volt-second balance at 20kHz switching</div>
+              <div class="slide-bullet">State machine: FC activates below 40% SoC threshold</div>
+              <div class="slide-bullet">Thermal derating model included for Li-ion pack above 45°C</div>
+            </div>
+            <div class="slide-number">04 / 06</div>
+          </div>
+
+          <div class="slide slide--two-col">
+            <div class="slide-accent-bar"></div>
+            <div class="col-left">
+              <span class="slide-title">Results & Outcomes</span>
+              <h3>Performance Gains</h3>
+              <p>Integration of the PEM FC demonstrated measurable improvement in total effective range. Hybrid powertrain reduced peak battery discharge rates, extending cell cycle life significantly.</p>
+              <div class="slide-bullets">
+                <div class="slide-bullet">Effective range: 45 km → 68 km (+51%)</div>
+                <div class="slide-bullet">Peak battery C-rate reduced by ~22% with FC active</div>
+                <div class="slide-bullet">Total system efficiency: 82.3%</div>
+                <div class="slide-bullet">Zero tailpipe emissions — FC exhaust: water vapour</div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="stat-list">
+                <div class="stat-item"><div class="stat-item__value">+51%</div><div class="stat-item__label">Range Extension</div></div>
+                <div class="stat-item"><div class="stat-item__value">82.3%</div><div class="stat-item__label">System Efficiency</div></div>
+                <div class="stat-item"><div class="stat-item__value">−22%</div><div class="stat-item__label">Peak Battery C-rate</div></div>
+                <div class="stat-item"><div class="stat-item__value">0g</div><div class="stat-item__label">CO₂ Emissions</div></div>
+              </div>
+            </div>
+            <div class="slide-number">05 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Learnings & Future Work</span>
+            <h3>Key Takeaways</h3>
+            <p>This project deepened my understanding of hybrid energy system control, power converter design, and constraints of integrating hydrogen fuel cells into compact platforms. Future work: bidirectional converters for regen braking and HIL hardware prototyping.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">FC cold-start latency requires pre-charging buffer capacitor</div>
+              <div class="slide-bullet">Hydrogen storage (metal hydride vs. compressed) is dominant mass challenge</div>
+              <div class="slide-bullet">Next: hardware-in-the-loop (HIL) testing with physical DC-DC converter</div>
+              <div class="slide-bullet">Potential V2G extension using same FC stack in stationary mode</div>
+            </div>
+            <div class="slide-number">06 / 06</div>
+          </div>
+
+        </div>
+
+        <div class="slide-dots" id="slideDots">
+          <button class="slide-dot active" data-slide="0"></button>
+          <button class="slide-dot" data-slide="1"></button>
+          <button class="slide-dot" data-slide="2"></button>
+          <button class="slide-dot" data-slide="3"></button>
+          <button class="slide-dot" data-slide="4"></button>
+          <button class="slide-dot" data-slide="5"></button>
+        </div>
+
+        <div class="slide-controls">
+          <button class="slide-nav-btn" id="prevBtn" disabled>
+            <i data-lucide="arrow-left" width="16" height="16"></i> Previous
+          </button>
+          <span class="slide-counter">Slide <span id="currentSlide">1</span> of 6</span>
+          <button class="slide-nav-btn" id="nextBtn">
+            Next <i data-lucide="arrow-right" width="16" height="16"></i>
+          </button>
+        </div>
+        </div><!-- /.summary-view -->
+
+        <!-- PDF viewer -->
+        <div class="pdf-viewer-wrap" id="pdfView">
+          <iframe class="pdf-viewer" src="Projects/Economic%20Analysis%20of%20IoT%20based%20Solar%20powered%20Pumping%20system%20for%20Off-grid%20Rural%20System.pdf" title="Original Presentation"></iframe>
+          <p class="pdf-hint">Use scroll / zoom controls to navigate the presentation</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECT TIMELINE -->
+    <section class="timeline-section">
+      <p class="section-label-sm reveal">Project Timeline</p>
+      <h2 class="section-title reveal">How it came together</h2>
+
+      <div class="proj-timeline">
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 1 — Research</div>
+          <div class="proj-timeline__title">Literature Review & Concept Definition</div>
+          <div class="proj-timeline__duration">Aug 2024 — Sep 2024</div>
+          <div class="proj-timeline__body">
+            <p>Reviewed academic literature on PEM fuel cell integration in light EVs and hybrid bicycle platforms. Defined system requirements, target power levels, and performance benchmarks. Evaluated BLDC vs. PMSM motor topologies.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Literature Review</span>
+              <span class="tool-tag">System Requirements</span>
+              <span class="tool-tag">Motor Selection</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 2 — Design</div>
+          <div class="proj-timeline__title">System Architecture & Component Sizing</div>
+          <div class="proj-timeline__duration">Oct 2024 — Nov 2024</div>
+          <div class="proj-timeline__body">
+            <p>Designed hybrid powertrain: Li-ion battery as primary, PEM fuel cell as range extender via boost converter. Sized battery pack (48V, 10Ah), fuel cell (100W), boost converter duty cycle (0.5 at 20kHz), and BMS thresholds using Kirchhoff and volt-second balance equations.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Power Electronics</span>
+              <span class="tool-tag">Component Sizing</span>
+              <span class="tool-tag">BMS Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 3 — Simulation</div>
+          <div class="proj-timeline__title">MATLAB/Simulink Modelling</div>
+          <div class="proj-timeline__duration">Nov 2024 — Jan 2025</div>
+          <div class="proj-timeline__body">
+            <p>Built full system model in MATLAB/Simulink using Simscape Electrical. Parameterized PEM FC from polarization curves. Implemented Stateflow energy management logic. Simulated BLDC torque-speed characteristics under urban, hill-climb, and cruise duty cycles.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">MATLAB</span>
+              <span class="tool-tag">Simulink</span>
+              <span class="tool-tag">Simscape</span>
+              <span class="tool-tag">Stateflow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 4 — Analysis</div>
+          <div class="proj-timeline__title">Performance Evaluation & Optimization</div>
+          <div class="proj-timeline__duration">Jan 2025 — Feb 2025</div>
+          <div class="proj-timeline__body">
+            <p>Evaluated simulation outputs against benchmarks. Iterated on energy management SoC thresholds (30% vs 40% vs 50%) to minimize peak discharge. Documented trade-offs between range extension and battery cycle life.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Performance Analysis</span>
+              <span class="tool-tag">Parametric Study</span>
+              <span class="tool-tag">Optimization</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 5 — Documentation</div>
+          <div class="proj-timeline__title">Report & Presentation</div>
+          <div class="proj-timeline__duration">Feb 2025 — Mar 2025</div>
+          <div class="proj-timeline__body">
+            <p>Compiled full technical report with architecture diagrams, simulation waveforms, efficiency calculations, and comparative analysis. Delivered presentation to academic panel and documented a future HIL hardware prototype roadmap.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Technical Report</span>
+              <span class="tool-tag">Presentation</span>
+              <span class="tool-tag">Documentation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY SPECS -->
+    <section class="specs-section">
+      <div class="specs-inner">
+        <p class="section-label-sm reveal">Key Metrics</p>
+        <h2 class="section-title reveal">Technical Specifications</h2>
+        <div class="specs-grid">
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="zap" width="18" height="18"></i></div>
+            <div class="spec-card__value">250W</div>
+            <div class="spec-card__label">BLDC Motor Power</div>
+            <div class="spec-card__sub">48V nominal, hub-drive</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="battery-charging" width="18" height="18"></i></div>
+            <div class="spec-card__value">10Ah</div>
+            <div class="spec-card__label">Battery Capacity</div>
+            <div class="spec-card__sub">Li-ion, 48V, ~480Wh</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="wind" width="18" height="18"></i></div>
+            <div class="spec-card__value">100W</div>
+            <div class="spec-card__label">PEM Fuel Cell</div>
+            <div class="spec-card__sub">24V output, range extender</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="route" width="18" height="18"></i></div>
+            <div class="spec-card__value">68 km</div>
+            <div class="spec-card__label">Extended Range</div>
+            <div class="spec-card__sub">vs. 45 km battery-only</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="activity" width="18" height="18"></i></div>
+            <div class="spec-card__value">82.3%</div>
+            <div class="spec-card__label">System Efficiency</div>
+            <div class="spec-card__sub">Motor + converter combined</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="cpu" width="18" height="18"></i></div>
+            <div class="spec-card__value">20kHz</div>
+            <div class="spec-card__label">Switching Frequency</div>
+            <div class="spec-card__sub">Boost converter PWM</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="proj-footer">
+    <div class="proj-footer__inner">
+      <span class="proj-footer__text">© 2026 Saif Ur Rahman Khan</span>
+      <div class="proj-footer__links">
+        <a href="index.html#projects">← Back to Projects</a>
+        <a href="project-hybrid-microgrid.html">Next Project →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    themeBtn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      lucide.createIcons();
+    });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slide-dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const currentSlideEl = document.getElementById('currentSlide');
+    const progressFill = document.getElementById('progressFill');
+    let current = 0;
+    const total = slides.length;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      slides[current].classList.add('exit');
+      const prev = current;
+      setTimeout(() => slides[prev].classList.remove('exit'), 600);
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      currentSlideEl.textContent = current + 1;
+      progressFill.style.width = ((current + 1) / total * 100) + '%';
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    nextBtn.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { if (current < total - 1) goTo(current + 1); }
+      if (e.key === 'ArrowLeft') { if (current > 0) goTo(current - 1); }
+    });
+
+    // Mode toggle
+    const modeSlides = document.getElementById('modeSlides');
+    const modePdf = document.getElementById('modePdf');
+    const summaryView = document.getElementById('summaryView');
+    const pdfView = document.getElementById('pdfView');
+
+    modeSlides.addEventListener('click', () => {
+      modeSlides.classList.add('active');
+      modePdf.classList.remove('active');
+      summaryView.classList.remove('hidden');
+      pdfView.classList.remove('active');
+    });
+    modePdf.addEventListener('click', () => {
+      modePdf.classList.add('active');
+      modeSlides.classList.remove('active');
+      summaryView.classList.add('hidden');
+      pdfView.classList.add('active');
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decentralized Solar Energy Microgrid — Saif Ur Rahman Khan</title>
+  <meta name="description"
+    content="DTU-Incubate IIF Ideathon 2024 winner — peer-to-peer solar microgrid for urban residential clusters." />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="project-style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">Saif<span>.</span></a>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="index.html#projects" class="back-btn">
+          <i data-lucide="arrow-left" width="15" height="15"></i> All Projects
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i data-lucide="moon" width="16" height="16"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="project-hero reveal">
+      <div class="project-hero__category">Solar PV · Urban Microgrids</div>
+      <h1>Decentralized Solar Energy Microgrid</h1>
+      <div class="project-hero__meta">
+        <div class="meta-item">
+          <span class="meta-item__label">Year</span>
+          <span class="meta-item__value">2024</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Award</span>
+          <span class="meta-item__value" style="color:var(--accent)">🏆 Ideathon Winner</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Event</span>
+          <span class="meta-item__value">DTU-Incubate IIF 2024</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Status</span>
+          <span class="meta-item__value" style="color:var(--accent)">Completed</span>
+        </div>
+      </div>
+      <div class="tags-row">
+        <span class="tool-tag">PVsyst</span>
+        <span class="tool-tag">Solar PV</span>
+        <span class="tool-tag">Microgrid Design</span>
+        <span class="tool-tag">Net Metering</span>
+        <span class="tool-tag">P2P Energy Trading</span>
+        <span class="tool-tag">DISCOM Regulations</span>
+      </div>
+    </header>
+
+    <section class="slideshow-section">
+      <div class="slideshow-wrapper">
+        <p class="section-label">Project Presentation</p>
+        <h2>Technical Slide Deck</h2>
+
+        <div class="slide-mode-toggle">
+          <button class="slide-mode-btn active" id="modeSlides">
+            <i data-lucide="presentation" width="14" height="14"></i> Summary Slides
+          </button>
+          <button class="slide-mode-btn" id="modePdf">
+            <i data-lucide="file-text" width="14" height="14"></i> Original PPT
+          </button>
+        </div>
+
+        <div class="summary-view" id="summaryView">
+        <div class="slide-progress">
+          <div class="slide-progress__fill" id="progressFill" style="width:16.67%"></div>
+        </div>
+
+        <div class="slide-deck">
+
+          <!-- Slide 1: Cover -->
+          <div class="slide slide--cover active">
+            <div class="slide-accent-bar"></div>
+            <h2>Decentralized Solar Energy<br />Microgrid</h2>
+            <p>Peer-to-peer energy sharing for urban residential clusters — winner of DTU-Incubate IIF Ideathon 2024.
+            </p>
+            <div class="slide-number">01 / 06</div>
+          </div>
+
+          <!-- Slide 2: Problem -->
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Problem Statement</span>
+            <h3>India's Urban Solar Paradox</h3>
+            <p>Urban apartment residents in India lack access to rooftop solar due to shared ownership structures.
+              Centralized grid import dominates despite abundant rooftop space — residents pay full retail tariffs while
+              surplus solar from individual consumers is underutilised. Regulatory frameworks are catching up but
+              technical architecture remains undefined.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">80% of urban electricity consumers are apartment dwellers — no direct rooftop
+                access</div>
+              <div class="slide-bullet">Net metering penetration in India &lt;0.5% of eligible connections (2023)</div>
+              <div class="slide-bullet">DISCOM buy-back tariffs are 40–60% below retail — disincentivises prosumers
+              </div>
+              <div class="slide-bullet">P2P trading can unlock value for both prosumers and energy-poor consumers</div>
+            </div>
+            <div class="slide-number">02 / 06</div>
+          </div>
+
+          <!-- Slide 3: Architecture -->
+          <div class="slide slide--two-col">
+            <div class="slide-accent-bar"></div>
+            <div class="col-left">
+              <span class="slide-title">System Design</span>
+              <h3>P2P Microgrid Architecture</h3>
+              <p>A residential cluster of 20 units shares a community solar array. Smart meters at each unit enable
+                real-time energy accounting. Surplus energy from prosumers is credited to neighbours via a
+                blockchain-inspired token ledger, with DISCOM as the settlement backstop.</p>
+              <div class="slide-bullets">
+                <div class="slide-bullet">Community solar: 50 kWp shared rooftop array</div>
+                <div class="slide-bullet">Smart meters with 15-min interval data logging</div>
+                <div class="slide-bullet">LV distribution: 415V, 3-phase, radial topology</div>
+                <div class="slide-bullet">Net metering + P2P token settlement mechanism</div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="stat-list">
+                <div class="stat-item">
+                  <div class="stat-item__value">50 kWp</div>
+                  <div class="stat-item__label">Community Solar Array</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-item__value">20</div>
+                  <div class="stat-item__label">Residential Units</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-item__value">415V</div>
+                  <div class="stat-item__label">LV Distribution Bus</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-item__value">15 min</div>
+                  <div class="stat-item__label">Metering Interval</div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-number">03 / 06</div>
+          </div>
+
+          <!-- Slide 4: Methodology -->
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Methodology</span>
+            <h3>PVsyst Modelling & Regulatory Analysis</h3>
+            <p>PVsyst was used to simulate the 50 kWp community array using TMY (Typical Meteorological Year) data for
+              New Delhi. Load profiles were synthesized from residential consumption surveys. Inverter sizing, cable
+              sizing, and protection coordination were performed per IS/IEC standards. DISCOM net metering compliance
+              was assessed against Delhi Electricity Regulatory Commission (DERC) guidelines.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">PVsyst simulation: monthly yield, PR, and specific production analysis</div>
+              <div class="slide-bullet">Load diversity factor applied for coincident peak demand estimation</div>
+              <div class="slide-bullet">String inverter sizing: 5 × 10 kW units with MPPT optimization</div>
+              <div class="slide-bullet">Protection: RCCB + SPD at array level, OCR at community feeder</div>
+            </div>
+            <div class="slide-number">04 / 06</div>
+          </div>
+
+          <!-- Slide 5: Results -->
+          <div class="slide slide--two-col">
+            <div class="slide-accent-bar"></div>
+            <div class="col-left">
+              <span class="slide-title">Results & Outcomes</span>
+              <h3>Economic & Technical Performance</h3>
+              <p>The proposed P2P microgrid showed compelling economics for both prosumers and consumers. Prosumers earn
+                20% more than DISCOM buy-back; consumers pay 18% less than grid retail. Simple payback period under 5
+                years with current CAPEX.</p>
+              <div class="slide-bullets">
+                <div class="slide-bullet">Annual generation: ~72,000 kWh — covers 85% of cluster demand</div>
+                <div class="slide-bullet">Performance ratio (PR): 78.4% — above industry benchmark</div>
+                <div class="slide-bullet">Payback period: 4.8 years at ₹45/Wp installed cost</div>
+                <div class="slide-bullet">CO₂ avoided: ~58 tonnes/year (grid emission factor 0.82 kgCO₂/kWh)</div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="stat-list">
+                <div class="stat-item">
+                  <div class="stat-item__value">72 MWh</div>
+                  <div class="stat-item__label">Annual Generation</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-item__value">78.4%</div>
+                  <div class="stat-item__label">Performance Ratio</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-item__value">4.8 yr</div>
+                  <div class="stat-item__label">Simple Payback</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-item__value">58 t</div>
+                  <div class="stat-item__label">CO₂ Avoided/yr</div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-number">05 / 06</div>
+          </div>
+
+          <!-- Slide 6: Learnings -->
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Learnings & Award</span>
+            <h3>Ideathon Win & Key Insights</h3>
+            <p>The project won the DTU-Incubate IIF Ideathon 2024, competing against 60+ teams across Delhi NCR. Jury
+              feedback highlighted the regulatory-aware architecture and quantified P2P economics as key
+              differentiators. Key technical learning: DISCOM interconnection standards are the primary bottleneck — not
+              technology.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">🏆 Winner — DTU-Incubate IIF Ideathon 2024 (60+ competing teams)</div>
+              <div class="slide-bullet">Regulatory framework (DERC amendment) is critical path for deployment</div>
+              <div class="slide-bullet">Battery storage integration would push self-sufficiency from 85% → 95%+</div>
+              <div class="slide-bullet">Next: pilot proposal for a real residential society in New Delhi</div>
+            </div>
+            <div class="slide-number">06 / 06</div>
+          </div>
+
+        </div>
+
+        <div class="slide-dots" id="slideDots">
+          <button class="slide-dot active" data-slide="0"></button>
+          <button class="slide-dot" data-slide="1"></button>
+          <button class="slide-dot" data-slide="2"></button>
+          <button class="slide-dot" data-slide="3"></button>
+          <button class="slide-dot" data-slide="4"></button>
+          <button class="slide-dot" data-slide="5"></button>
+        </div>
+
+        <div class="slide-controls">
+          <button class="slide-nav-btn" id="prevBtn" disabled>
+            <i data-lucide="arrow-left" width="16" height="16"></i> Previous
+          </button>
+          <span class="slide-counter">Slide <span id="currentSlide">1</span> of 6</span>
+          <button class="slide-nav-btn" id="nextBtn">
+            Next <i data-lucide="arrow-right" width="16" height="16"></i>
+          </button>
+        </div>
+        </div><!-- /.summary-view -->
+
+        <div class="pdf-viewer-wrap" id="pdfView">
+          <iframe class="pdf-viewer" src="Projects/SIH2024_IDEA_Presentation.pdf" title="Original Presentation"></iframe>
+          <p class="pdf-hint">Use scroll / zoom controls to navigate the presentation</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <p class="section-label-sm reveal">Project Timeline</p>
+      <h2 class="section-title reveal">From concept to Ideathon win</h2>
+
+      <div class="proj-timeline">
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 1 — Concept</div>
+          <div class="proj-timeline__title">Problem Identification & Regulatory Research</div>
+          <div class="proj-timeline__duration">Jul 2024 — Aug 2024</div>
+          <div class="proj-timeline__body">
+            <p>Identified urban solar access gap as a key policy and engineering problem. Studied DERC net metering
+              regulations, DISCOM interconnection procedures, and Ministry of New and Renewable Energy (MNRE) rooftop
+              solar guidelines. Framed P2P energy trading model to exploit regulatory white space.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Regulatory Analysis</span>
+              <span class="tool-tag">DERC Guidelines</span>
+              <span class="tool-tag">MNRE Policy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 2 — Technical Design</div>
+          <div class="proj-timeline__title">Load Profiling & System Sizing</div>
+          <div class="proj-timeline__duration">Aug 2024 — Sep 2024</div>
+          <div class="proj-timeline__body">
+            <p>Conducted residential load survey across a sample of 20 apartments. Applied diversity factor and
+              synthesized 15-min interval hourly load profiles. Sized the community solar array (50 kWp), inverters
+              (5×10 kW), cabling (LV 415V radial), and protection coordination scheme per IS 13234 and IEC 60364.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Load Profiling</span>
+              <span class="tool-tag">PV Sizing</span>
+              <span class="tool-tag">Protection Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 3 — Simulation</div>
+          <div class="proj-timeline__title">PVsyst Yield Modelling</div>
+          <div class="proj-timeline__duration">Sep 2024 — Oct 2024</div>
+          <div class="proj-timeline__body">
+            <p>Built detailed PVsyst model using New Delhi TMY meteorological data. Simulated monthly and annual energy
+              yield, soiling losses, cable losses, and inverter efficiency curves. Optimised panel tilt (22°) and
+              azimuth (south-facing) for maximum annual generation. PR of 78.4% achieved post all loss corrections.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">PVsyst</span>
+              <span class="tool-tag">TMY Data</span>
+              <span class="tool-tag">Yield Simulation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 4 — Economics</div>
+          <div class="proj-timeline__title">Techno-Economic Analysis & P2P Model</div>
+          <div class="proj-timeline__duration">Oct 2024 — Nov 2024</div>
+          <div class="proj-timeline__body">
+            <p>Developed financial model: CAPEX at ₹45/Wp, OPEX at 1%/yr, 25-yr project life, 8% discount rate.
+              Calculated NPV, IRR, and simple payback for prosumer and community perspectives. Designed P2P token
+              pricing mechanism between DISCOM buy-back and retail tariff to incentivise both sides.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Financial Modelling</span>
+              <span class="tool-tag">NPV / IRR</span>
+              <span class="tool-tag">P2P Pricing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 5 — Competition</div>
+          <div class="proj-timeline__title">DTU-Incubate IIF Ideathon 2024 — 🏆 Winner</div>
+          <div class="proj-timeline__duration">Nov 2024</div>
+          <div class="proj-timeline__body">
+            <p>Presented the full concept to a panel of investors, faculty, and industry professionals at the
+              DTU-Incubate IIF Ideathon. Competed against 60+ teams from Delhi NCR. Won first prize — jury highlighted
+              the regulatory-aware design, quantified P2P economics, and clear deployment pathway as key
+              differentiators.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">🏆 First Prize</span>
+              <span class="tool-tag">DTU-Incubate IIF</span>
+              <span class="tool-tag">60+ Teams</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="specs-section">
+      <div class="specs-inner">
+        <p class="section-label-sm reveal">Key Metrics</p>
+        <h2 class="section-title reveal">Technical Specifications</h2>
+        <div class="specs-grid">
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="sun" width="18" height="18"></i></div>
+            <div class="spec-card__value">50 kWp</div>
+            <div class="spec-card__label">Community Solar Array</div>
+            <div class="spec-card__sub">Shared rooftop, 20 units</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="zap" width="18" height="18"></i></div>
+            <div class="spec-card__value">72 MWh</div>
+            <div class="spec-card__label">Annual Generation</div>
+            <div class="spec-card__sub">85% of cluster demand</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="activity" width="18" height="18"></i></div>
+            <div class="spec-card__value">78.4%</div>
+            <div class="spec-card__label">Performance Ratio</div>
+            <div class="spec-card__sub">PVsyst simulated, New Delhi TMY</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="trending-up" width="18" height="18"></i></div>
+            <div class="spec-card__value">4.8 yr</div>
+            <div class="spec-card__label">Simple Payback</div>
+            <div class="spec-card__sub">At ₹45/Wp installed cost</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="leaf" width="18" height="18"></i></div>
+            <div class="spec-card__value">58 t</div>
+            <div class="spec-card__label">CO₂ Avoided/yr</div>
+            <div class="spec-card__sub">Grid emission factor 0.82 kgCO₂/kWh</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="trophy" width="18" height="18"></i></div>
+            <div class="spec-card__value">1st</div>
+            <div class="spec-card__label">Ideathon Ranking</div>
+            <div class="spec-card__sub">DTU-Incubate IIF 2024</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="proj-footer">
+    <div class="proj-footer__inner">
+      <span class="proj-footer__text">© 2026 Saif Ur Rahman Khan</span>
+      <div class="proj-footer__links">
+        <a href="project-soc-dnn.html">← Previous Project</a>
+        <a href="index.html#projects">All Projects →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    themeBtn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      lucide.createIcons();
+    });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slide-dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const currentSlideEl = document.getElementById('currentSlide');
+    const progressFill = document.getElementById('progressFill');
+    let current = 0;
+    const total = slides.length;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      slides[current].classList.add('exit');
+      const prev = current;
+      setTimeout(() => slides[prev].classList.remove('exit'), 600);
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      currentSlideEl.textContent = current + 1;
+      progressFill.style.width = ((current + 1) / total * 100) + '%';
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    nextBtn.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { if (current < total - 1) goTo(current + 1); }
+      if (e.key === 'ArrowLeft') { if (current > 0) goTo(current - 1); }
+    });
+
+    // Mode toggle
+    const modeSlides = document.getElementById('modeSlides');
+    const modePdf = document.getElementById('modePdf');
+    const summaryView = document.getElementById('summaryView');
+    const pdfView = document.getElementById('pdfView');
+    modeSlides.addEventListener('click', () => {
+      modeSlides.classList.add('active'); modePdf.classList.remove('active');
+      summaryView.classList.remove('hidden'); pdfView.classList.remove('active');
+    });
+    modePdf.addEventListener('click', () => {
+      modePdf.classList.add('active'); modeSlides.classList.remove('active');
+      summaryView.classList.add('hidden'); pdfView.classList.add('active');
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>

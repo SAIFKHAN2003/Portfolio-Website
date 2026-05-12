@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Off-Grid Hybrid Renewable Energy System — Saif Ur Rahman Khan</title>
+  <meta name="description" content="Detailed breakdown of the PV–Wind–Hydrogen off-grid hybrid microgrid project." />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="project-style.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">Saif<span>.</span></a>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="index.html#projects" class="back-btn">
+          <i data-lucide="arrow-left" width="15" height="15"></i> All Projects
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i data-lucide="moon" width="16" height="16"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="project-hero reveal">
+      <div class="project-hero__category">Renewable Energy · Rural Electrification</div>
+      <h1>Off-Grid Hybrid Renewable Energy System</h1>
+      <div class="project-hero__meta">
+        <div class="meta-item">
+          <span class="meta-item__label">Year</span>
+          <span class="meta-item__value">2024</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Duration</span>
+          <span class="meta-item__value">~5 months</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Role</span>
+          <span class="meta-item__value">Lead Analyst</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Status</span>
+          <span class="meta-item__value" style="color:var(--accent)">Completed</span>
+        </div>
+      </div>
+      <div class="tags-row">
+        <span class="tool-tag">HOMER Pro</span>
+        <span class="tool-tag">MATLAB</span>
+        <span class="tool-tag">PV Systems</span>
+        <span class="tool-tag">Wind Turbine</span>
+        <span class="tool-tag">Hydrogen Storage</span>
+        <span class="tool-tag">Techno-Economic Optimization</span>
+      </div>
+    </header>
+
+    <section class="slideshow-section">
+      <div class="slideshow-wrapper">
+        <p class="section-label">Project Presentation</p>
+        <h2>Technical Slide Deck</h2>
+
+        <div class="slide-mode-toggle">
+          <button class="slide-mode-btn active" id="modeSlides">
+            <i data-lucide="presentation" width="14" height="14"></i> Summary Slides
+          </button>
+          <button class="slide-mode-btn" id="modePdf">
+            <i data-lucide="file-text" width="14" height="14"></i> Original PPT
+          </button>
+        </div>
+
+        <div class="summary-view" id="summaryView">
+        <div class="slide-progress">
+          <div class="slide-progress__fill" id="progressFill" style="width:16.67%"></div>
+        </div>
+
+        <div class="slide-deck">
+
+          <div class="slide slide--cover active">
+            <div class="slide-accent-bar"></div>
+            <h2>Off-Grid PV–Wind–Hydrogen<br/>Hybrid Energy System</h2>
+            <p>Techno-economic optimization of a multi-source rural microgrid for reliable electrification with green hydrogen integration.</p>
+            <div class="slide-number">01 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Problem Statement</span>
+            <h3>Reliable Rural Electrification</h3>
+            <p>Over 700 million people globally lack reliable electricity access. Grid extension is economically unviable for remote areas. Standalone renewable microgrids offer a pathway — but intermittency of solar and wind demands intelligent storage and dispatch strategies.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">Solar PV alone suffers from night-time and cloud-cover gaps</div>
+              <div class="slide-bullet">Wind resources are seasonally variable and site-dependent</div>
+              <div class="slide-bullet">Hydrogen offers long-duration seasonal storage that batteries cannot provide</div>
+              <div class="slide-bullet">Lowest LCOE configuration must balance capital cost vs. reliability</div>
+            </div>
+            <div class="slide-number">02 / 06</div>
+          </div>
+
+          <div class="slide slide--two-col">
+            <div class="slide-accent-bar"></div>
+            <div class="col-left">
+              <span class="slide-title">System Configuration</span>
+              <h3>Hybrid Architecture</h3>
+              <p>Three primary energy sources (PV, wind, hydrogen FC) combined with battery buffer and electrolyzer for hydrogen production. HOMER Pro performed multi-year techno-economic optimization across 500+ configurations.</p>
+              <div class="slide-bullets">
+                <div class="slide-bullet">PV array: 15 kWp monocrystalline panels</div>
+                <div class="slide-bullet">Wind: 5 kW small-scale HAWT turbine</div>
+                <div class="slide-bullet">Electrolyzer: 3 kW PEM type for H₂ generation</div>
+                <div class="slide-bullet">Fuel cell: 2 kW backup during extended low-RE periods</div>
+                <div class="slide-bullet">Battery: 10 kWh Li-ion short-term buffer</div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="stat-list">
+                <div class="stat-item"><div class="stat-item__value">15 kWp</div><div class="stat-item__label">Solar PV Capacity</div></div>
+                <div class="stat-item"><div class="stat-item__value">5 kW</div><div class="stat-item__label">Wind Turbine</div></div>
+                <div class="stat-item"><div class="stat-item__value">3 kW</div><div class="stat-item__label">PEM Electrolyzer</div></div>
+                <div class="stat-item"><div class="stat-item__value">10 kWh</div><div class="stat-item__label">Battery Buffer</div></div>
+              </div>
+            </div>
+            <div class="slide-number">03 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Methodology</span>
+            <h3>HOMER Pro + MATLAB Workflow</h3>
+            <p>Site-specific solar irradiance and wind speed data (NASA MERRA-2 dataset) were imported into HOMER Pro. Load profile was synthesized from a 50-household village demand survey. HOMER ran multi-year simulations with annualized cost optimization. MATLAB was used for post-processing LCOE sensitivity and component degradation analysis.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">25-year project lifetime, 6% discount rate</div>
+              <div class="slide-bullet">LCOE and LCOH as primary optimization objectives</div>
+              <div class="slide-bullet">Load following vs. cycle-charging dispatch strategies compared</div>
+              <div class="slide-bullet">Sensitivity analysis on fuel cell replacement cost ± 30%</div>
+            </div>
+            <div class="slide-number">04 / 06</div>
+          </div>
+
+          <div class="slide slide--two-col">
+            <div class="slide-accent-bar"></div>
+            <div class="col-left">
+              <span class="slide-title">Results & Outcomes</span>
+              <h3>Optimal Configuration</h3>
+              <p>The optimized PV–Wind–H₂ configuration achieved highly competitive LCOE values with 99.6% reliability. Hydrogen storage eliminated 94% of unmet energy events that battery-only systems would experience during extended low-irradiance periods.</p>
+              <div class="slide-bullets">
+                <div class="slide-bullet">LCOE: $0.18/kWh — competitive with diesel genset at $0.28/kWh</div>
+                <div class="slide-bullet">LCOH (green H₂): $4.2/kg from surplus RE generation</div>
+                <div class="slide-bullet">Reliability: 99.6% annual load coverage</div>
+                <div class="slide-bullet">CO₂ avoided: ~28 tonnes/year vs. diesel baseline</div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="stat-list">
+                <div class="stat-item"><div class="stat-item__value">$0.18</div><div class="stat-item__label">LCOE per kWh</div></div>
+                <div class="stat-item"><div class="stat-item__value">$4.2/kg</div><div class="stat-item__label">Green H₂ LCOH</div></div>
+                <div class="stat-item"><div class="stat-item__value">99.6%</div><div class="stat-item__label">Load Reliability</div></div>
+                <div class="stat-item"><div class="stat-item__value">28 t</div><div class="stat-item__label">CO₂ Avoided/yr</div></div>
+              </div>
+            </div>
+            <div class="slide-number">05 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Learnings & Future Work</span>
+            <h3>Key Takeaways</h3>
+            <p>This project built deep expertise in techno-economic modelling, long-duration energy storage trade-offs, and the real cost of energy reliability. Future directions include demand response integration and real-time SCADA-based dispatch optimization.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">Hydrogen electrolyzer capital cost is the dominant LCOE driver (&gt;40%)</div>
+              <div class="slide-bullet">Wind complementarity with solar significantly improves seasonal reliability</div>
+              <div class="slide-bullet">Load-following dispatch outperforms cycle-charging for H₂ systems</div>
+              <div class="slide-bullet">Next: demand-side management + real-time IoT dispatch controller</div>
+            </div>
+            <div class="slide-number">06 / 06</div>
+          </div>
+
+        </div>
+
+        <div class="slide-dots" id="slideDots">
+          <button class="slide-dot active" data-slide="0"></button>
+          <button class="slide-dot" data-slide="1"></button>
+          <button class="slide-dot" data-slide="2"></button>
+          <button class="slide-dot" data-slide="3"></button>
+          <button class="slide-dot" data-slide="4"></button>
+          <button class="slide-dot" data-slide="5"></button>
+        </div>
+
+        <div class="slide-controls">
+          <button class="slide-nav-btn" id="prevBtn" disabled>
+            <i data-lucide="arrow-left" width="16" height="16"></i> Previous
+          </button>
+          <span class="slide-counter">Slide <span id="currentSlide">1</span> of 6</span>
+          <button class="slide-nav-btn" id="nextBtn">
+            Next <i data-lucide="arrow-right" width="16" height="16"></i>
+          </button>
+        </div>
+        </div><!-- /.summary-view -->
+
+        <div class="pdf-viewer-wrap" id="pdfView">
+          <iframe class="pdf-viewer" src="Projects/HRES%20presentation%20final.pdf" title="Original Presentation"></iframe>
+          <p class="pdf-hint">Use scroll / zoom controls to navigate the presentation</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <p class="section-label-sm reveal">Project Timeline</p>
+      <h2 class="section-title reveal">How it came together</h2>
+
+      <div class="proj-timeline">
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 1 — Research</div>
+          <div class="proj-timeline__title">Site Selection & Resource Assessment</div>
+          <div class="proj-timeline__duration">Jun 2024 — Jul 2024</div>
+          <div class="proj-timeline__body">
+            <p>Identified a representative remote village site in Rajasthan. Collected NASA MERRA-2 hourly solar irradiance and wind speed data for 10-year period. Synthesized village load profile from household surveys and census data.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">NASA MERRA-2</span>
+              <span class="tool-tag">Resource Assessment</span>
+              <span class="tool-tag">Load Profile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 2 — Modelling</div>
+          <div class="proj-timeline__title">HOMER Pro Setup & Configuration Space</div>
+          <div class="proj-timeline__duration">Jul 2024 — Aug 2024</div>
+          <div class="proj-timeline__body">
+            <p>Configured HOMER Pro with 500+ system configurations across PV array sizes (5–25 kWp), wind turbine options, electrolyzer capacities, and battery bank sizes. Set techno-economic parameters: 25-year lifetime, 6% discount rate, component capital costs from market data.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">HOMER Pro</span>
+              <span class="tool-tag">Techno-Economic</span>
+              <span class="tool-tag">LCOE Optimization</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 3 — Optimization</div>
+          <div class="proj-timeline__title">Multi-Year Simulation & Dispatch Analysis</div>
+          <div class="proj-timeline__duration">Aug 2024 — Sep 2024</div>
+          <div class="proj-timeline__body">
+            <p>Ran HOMER optimization across all configurations using load-following and cycle-charging dispatch strategies. Filtered results by reliability threshold (&gt;99%) and ranked by NPC. Analyzed hourly dispatch profiles for the optimal system to understand seasonal hydrogen storage dynamics.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Multi-Year Simulation</span>
+              <span class="tool-tag">Dispatch Optimization</span>
+              <span class="tool-tag">Reliability Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 4 — Analysis</div>
+          <div class="proj-timeline__title">MATLAB Post-Processing & Sensitivity</div>
+          <div class="proj-timeline__duration">Sep 2024 — Oct 2024</div>
+          <div class="proj-timeline__body">
+            <p>Exported HOMER results to MATLAB for sensitivity analysis. Studied LCOE sensitivity to electrolyzer cost (±30%), fuel cell replacement frequency, and carbon price scenarios. Generated comparative charts for PV-only, PV-battery, and PV-Wind-H₂ configurations.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">MATLAB</span>
+              <span class="tool-tag">Sensitivity Analysis</span>
+              <span class="tool-tag">Carbon Pricing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 5 — Reporting</div>
+          <div class="proj-timeline__title">Technical Report & Dissemination</div>
+          <div class="proj-timeline__duration">Oct 2024 — Nov 2024</div>
+          <div class="proj-timeline__body">
+            <p>Compiled comprehensive technical report with system schematics, optimization results, sensitivity charts, and policy recommendations for rural electrification deployment. Presented findings to academic peers and faculty panel.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Technical Report</span>
+              <span class="tool-tag">Policy Analysis</span>
+              <span class="tool-tag">Presentation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="specs-section">
+      <div class="specs-inner">
+        <p class="section-label-sm reveal">Key Metrics</p>
+        <h2 class="section-title reveal">Technical Specifications</h2>
+        <div class="specs-grid">
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="sun" width="18" height="18"></i></div>
+            <div class="spec-card__value">15 kWp</div>
+            <div class="spec-card__label">Solar PV Capacity</div>
+            <div class="spec-card__sub">Monocrystalline, 19% efficiency</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="wind" width="18" height="18"></i></div>
+            <div class="spec-card__value">5 kW</div>
+            <div class="spec-card__label">Wind Turbine</div>
+            <div class="spec-card__sub">HAWT, hub height 30m</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="flask-conical" width="18" height="18"></i></div>
+            <div class="spec-card__value">$0.18</div>
+            <div class="spec-card__label">LCOE per kWh</div>
+            <div class="spec-card__sub">vs. $0.28/kWh diesel</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="droplets" width="18" height="18"></i></div>
+            <div class="spec-card__value">$4.2/kg</div>
+            <div class="spec-card__label">Green H₂ LCOH</div>
+            <div class="spec-card__sub">From surplus RE generation</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="shield-check" width="18" height="18"></i></div>
+            <div class="spec-card__value">99.6%</div>
+            <div class="spec-card__label">Load Reliability</div>
+            <div class="spec-card__sub">Annual load coverage</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="leaf" width="18" height="18"></i></div>
+            <div class="spec-card__value">28 t</div>
+            <div class="spec-card__label">CO₂ Avoided/yr</div>
+            <div class="spec-card__sub">vs. diesel genset baseline</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="proj-footer">
+    <div class="proj-footer__inner">
+      <span class="proj-footer__text">© 2026 Saif Ur Rahman Khan</span>
+      <div class="proj-footer__links">
+        <a href="project-fuel-cell.html">← Previous Project</a>
+        <a href="project-soc-dnn.html">Next Project →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    themeBtn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      lucide.createIcons();
+    });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slide-dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const currentSlideEl = document.getElementById('currentSlide');
+    const progressFill = document.getElementById('progressFill');
+    let current = 0;
+    const total = slides.length;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      slides[current].classList.add('exit');
+      const prev = current;
+      setTimeout(() => slides[prev].classList.remove('exit'), 600);
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      currentSlideEl.textContent = current + 1;
+      progressFill.style.width = ((current + 1) / total * 100) + '%';
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    nextBtn.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { if (current < total - 1) goTo(current + 1); }
+      if (e.key === 'ArrowLeft') { if (current > 0) goTo(current - 1); }
+    });
+
+    // Mode toggle
+    const modeSlides = document.getElementById('modeSlides');
+    const modePdf = document.getElementById('modePdf');
+    const summaryView = document.getElementById('summaryView');
+    const pdfView = document.getElementById('pdfView');
+    modeSlides.addEventListener('click', () => {
+      modeSlides.classList.add('active'); modePdf.classList.remove('active');
+      summaryView.classList.remove('hidden'); pdfView.classList.remove('active');
+    });
+    modePdf.addEventListener('click', () => {
+      modePdf.classList.add('active'); modeSlides.classList.remove('active');
+      summaryView.classList.add('hidden'); pdfView.classList.add('active');
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoC Estimation using DNN — Saif Ur Rahman Khan</title>
+  <meta name="description" content="Deep neural network for State-of-Charge estimation of Li-Ion batteries in EVs — IC3ECSBHI-2025." />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="project-style.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">Saif<span>.</span></a>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="index.html#projects" class="back-btn">
+          <i data-lucide="arrow-left" width="15" height="15"></i> All Projects
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i data-lucide="moon" width="16" height="16"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="project-hero reveal">
+      <div class="project-hero__category">Machine Learning · EV Battery Systems</div>
+      <h1>SoC Estimation of Li-Ion Batteries Using Deep Neural Network</h1>
+      <div class="project-hero__meta">
+        <div class="meta-item">
+          <span class="meta-item__label">Year</span>
+          <span class="meta-item__value">2025</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Published</span>
+          <span class="meta-item__value">IC3ECSBHI-2025</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Role</span>
+          <span class="meta-item__value">Primary Author</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Status</span>
+          <span class="meta-item__value" style="color:var(--accent)">Published</span>
+        </div>
+      </div>
+      <div class="tags-row">
+        <span class="tool-tag">Python</span>
+        <span class="tool-tag">Deep Learning</span>
+        <span class="tool-tag">TensorFlow/Keras</span>
+        <span class="tool-tag">Battery Modeling</span>
+        <span class="tool-tag">EV Systems</span>
+        <span class="tool-tag">Pandas / NumPy</span>
+      </div>
+    </header>
+
+    <section class="slideshow-section">
+      <div class="slideshow-wrapper">
+        <p class="section-label">Project Presentation</p>
+        <h2>Technical Slide Deck</h2>
+
+        <div class="slide-mode-toggle">
+          <button class="slide-mode-btn active" id="modeSlides">
+            <i data-lucide="presentation" width="14" height="14"></i> Summary Slides
+          </button>
+          <button class="slide-mode-btn" id="modePdf">
+            <i data-lucide="file-text" width="14" height="14"></i> Original PPT
+          </button>
+        </div>
+
+        <div class="summary-view" id="summaryView">
+        <div class="slide-progress">
+          <div class="slide-progress__fill" id="progressFill" style="width:16.67%"></div>
+        </div>
+
+        <div class="slide-deck">
+
+          <div class="slide slide--cover active">
+            <div class="slide-accent-bar"></div>
+            <h2>SoC Estimation of Li-Ion<br/>Batteries Using DNN</h2>
+            <p>Real-time State-of-Charge estimation for EV battery packs — presented at IC3ECSBHI-2025 International Conference.</p>
+            <div class="slide-number">01 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Problem Statement</span>
+            <h3>Why Accurate SoC Matters</h3>
+            <p>State-of-Charge is the fundamental metric that determines EV driving range, charging strategy, and battery health. Conventional Coulomb counting methods accumulate error over time and are sensitive to temperature variation. Model-based observers (Kalman filter, EKF) require precise equivalent circuit parameters that drift with aging.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">Coulomb counting error compounds to ±15% over a full cycle</div>
+              <div class="slide-bullet">EKF requires accurate battery model parameters — impractical for aging cells</div>
+              <div class="slide-bullet">Temperature effects introduce ±8% SoC deviation in conventional methods</div>
+              <div class="slide-bullet">Deep learning can learn implicit relationships without explicit cell modeling</div>
+            </div>
+            <div class="slide-number">02 / 06</div>
+          </div>
+
+          <div class="slide slide--two-col">
+            <div class="slide-accent-bar"></div>
+            <div class="col-left">
+              <span class="slide-title">Model Architecture</span>
+              <h3>Deep Neural Network Design</h3>
+              <p>A feedforward DNN with 4 hidden layers was designed using TensorFlow/Keras. Input features: terminal voltage, current, temperature, and elapsed time. Output: instantaneous SoC (0–100%). Trained on battery cycling dataset with WLTP and UDDS drive profiles.</p>
+              <div class="slide-bullets">
+                <div class="slide-bullet">Input layer: 4 features (V, I, T, t)</div>
+                <div class="slide-bullet">Hidden layers: [128, 64, 32, 16] neurons, ReLU activation</div>
+                <div class="slide-bullet">Output: single SoC value, sigmoid activation</div>
+                <div class="slide-bullet">Optimizer: Adam, LR = 0.001 with decay schedule</div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="stat-list">
+                <div class="stat-item"><div class="stat-item__value">4</div><div class="stat-item__label">Hidden Layers</div></div>
+                <div class="stat-item"><div class="stat-item__value">128</div><div class="stat-item__label">Max Neurons/Layer</div></div>
+                <div class="stat-item"><div class="stat-item__value">Adam</div><div class="stat-item__label">Optimizer</div></div>
+                <div class="stat-item"><div class="stat-item__value">ReLU</div><div class="stat-item__label">Activation Function</div></div>
+              </div>
+            </div>
+            <div class="slide-number">03 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Methodology</span>
+            <h3>Dataset & Training Pipeline</h3>
+            <p>Battery cycling dataset from public Li-ion characterization database (NASA and CALCE). Preprocessing: outlier removal, Z-score normalization, sliding window segmentation. 80/10/10 train/validation/test split. Evaluated against Coulomb counting and EKF baselines on held-out test cycles.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">Dataset: 50,000+ timestep samples across charge/discharge cycles</div>
+              <div class="slide-bullet">Feature engineering: delta voltage, dV/dt computed as additional inputs</div>
+              <div class="slide-bullet">Dropout (p=0.2) used for regularization to prevent overfitting</div>
+              <div class="slide-bullet">Early stopping with patience=10 on validation MAE</div>
+            </div>
+            <div class="slide-number">04 / 06</div>
+          </div>
+
+          <div class="slide slide--two-col">
+            <div class="slide-accent-bar"></div>
+            <div class="col-left">
+              <span class="slide-title">Results & Outcomes</span>
+              <h3>Model Performance</h3>
+              <p>The DNN significantly outperformed both Coulomb counting and extended Kalman filter baselines across all test conditions, with particularly strong performance in dynamic drive cycles and elevated temperature scenarios.</p>
+              <div class="slide-bullets">
+                <div class="slide-bullet">MAE: 1.34% — vs. Coulomb counting at 4.8%</div>
+                <div class="slide-bullet">RMSE: 1.82% across full UDDS test cycle</div>
+                <div class="slide-bullet">Robust to ±15°C temperature variation</div>
+                <div class="slide-bullet">Inference time: &lt;2ms — suitable for BMS deployment</div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="stat-list">
+                <div class="stat-item"><div class="stat-item__value">1.34%</div><div class="stat-item__label">Mean Absolute Error</div></div>
+                <div class="stat-item"><div class="stat-item__value">1.82%</div><div class="stat-item__label">RMSE (UDDS cycle)</div></div>
+                <div class="stat-item"><div class="stat-item__value">&lt;2ms</div><div class="stat-item__label">Inference Time</div></div>
+                <div class="stat-item"><div class="stat-item__value">−72%</div><div class="stat-item__label">Error vs. Coulomb Counting</div></div>
+              </div>
+            </div>
+            <div class="slide-number">05 / 06</div>
+          </div>
+
+          <div class="slide slide--content">
+            <div class="slide-accent-bar"></div>
+            <span class="slide-title">Learnings & Future Work</span>
+            <h3>Key Takeaways</h3>
+            <p>This research demonstrated that data-driven SoC estimation can substantially outperform conventional methods, particularly under dynamic conditions and aging. The work was accepted and presented at the IC3ECSBHI-2025 international conference in 2025.</p>
+            <div class="slide-bullets" style="margin-top:var(--space-md)">
+              <div class="slide-bullet">LSTM/GRU recurrent models may capture temporal dependencies better than feedforward DNN</div>
+              <div class="slide-bullet">Transfer learning could enable model adaptation to new cell chemistries with minimal data</div>
+              <div class="slide-bullet">Embedded deployment (STM32 + TFLite) would validate real-time BMS integration</div>
+              <div class="slide-bullet">SoH (State-of-Health) estimation is the natural extension of this work</div>
+            </div>
+            <div class="slide-number">06 / 06</div>
+          </div>
+
+        </div>
+
+        <div class="slide-dots" id="slideDots">
+          <button class="slide-dot active" data-slide="0"></button>
+          <button class="slide-dot" data-slide="1"></button>
+          <button class="slide-dot" data-slide="2"></button>
+          <button class="slide-dot" data-slide="3"></button>
+          <button class="slide-dot" data-slide="4"></button>
+          <button class="slide-dot" data-slide="5"></button>
+        </div>
+
+        <div class="slide-controls">
+          <button class="slide-nav-btn" id="prevBtn" disabled>
+            <i data-lucide="arrow-left" width="16" height="16"></i> Previous
+          </button>
+          <span class="slide-counter">Slide <span id="currentSlide">1</span> of 6</span>
+          <button class="slide-nav-btn" id="nextBtn">
+            Next <i data-lucide="arrow-right" width="16" height="16"></i>
+          </button>
+        </div>
+        </div><!-- /.summary-view -->
+
+        <div class="pdf-viewer-wrap" id="pdfView">
+          <iframe class="pdf-viewer" src="Projects/SOC%20Paper%20Presentation.pdf" title="Original Presentation"></iframe>
+          <p class="pdf-hint">Use scroll / zoom controls to navigate the presentation</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <p class="section-label-sm reveal">Research Timeline</p>
+      <h2 class="section-title reveal">From idea to publication</h2>
+
+      <div class="proj-timeline">
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 1 — Ideation</div>
+          <div class="proj-timeline__title">Problem Formulation & Literature Survey</div>
+          <div class="proj-timeline__duration">Aug 2024 — Sep 2024</div>
+          <div class="proj-timeline__body">
+            <p>Surveyed 40+ papers on battery SoC estimation methods: Coulomb counting, OCV lookup, Kalman filter variants, and data-driven approaches. Identified DNN as underexplored in embedded BMS context. Defined research gap and formulated approach.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Literature Survey</span>
+              <span class="tool-tag">Research Gap</span>
+              <span class="tool-tag">Problem Formulation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 2 — Data</div>
+          <div class="proj-timeline__title">Dataset Collection & Preprocessing</div>
+          <div class="proj-timeline__duration">Sep 2024 — Oct 2024</div>
+          <div class="proj-timeline__body">
+            <p>Downloaded and cleaned NASA and CALCE Li-ion battery cycling datasets. Applied Z-score normalization, handled missing timesteps, computed derivative features (dV/dt, dI/dt). Split into 80/10/10 train/val/test sets, ensuring temporal integrity of cycling sequences.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Pandas</span>
+              <span class="tool-tag">Data Cleaning</span>
+              <span class="tool-tag">Feature Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 3 — Development</div>
+          <div class="proj-timeline__title">DNN Architecture Design & Training</div>
+          <div class="proj-timeline__duration">Oct 2024 — Nov 2024</div>
+          <div class="proj-timeline__body">
+            <p>Designed and iteratively optimized DNN architecture in TensorFlow/Keras. Performed hyperparameter tuning on layer depth, width, dropout rate, and learning rate schedule. Implemented early stopping and model checkpointing. Final model: 4 layers, 128-64-32-16 neurons.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">TensorFlow</span>
+              <span class="tool-tag">Keras</span>
+              <span class="tool-tag">Hyperparameter Tuning</span>
+              <span class="tool-tag">Dropout</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 4 — Evaluation</div>
+          <div class="proj-timeline__title">Benchmarking & Results Analysis</div>
+          <div class="proj-timeline__duration">Nov 2024 — Dec 2024</div>
+          <div class="proj-timeline__body">
+            <p>Benchmarked DNN against Coulomb counting and EKF implementations. Evaluated on held-out UDDS and WLTP drive cycles at 25°C and 40°C. Generated MAE, RMSE, and Max-error metrics. Analyzed error distribution across SoC range — model performed best between 20–80% SoC.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Benchmarking</span>
+              <span class="tool-tag">Error Analysis</span>
+              <span class="tool-tag">UDDS / WLTP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-timeline__item reveal">
+          <div class="proj-timeline__dot"></div>
+          <div class="proj-timeline__phase">Phase 5 — Publication</div>
+          <div class="proj-timeline__title">Paper Writing & Conference Presentation</div>
+          <div class="proj-timeline__duration">Dec 2024 — Feb 2025</div>
+          <div class="proj-timeline__body">
+            <p>Wrote and submitted paper to IC3ECSBHI-2025 International Conference. Received acceptance. Prepared presentation slides and delivered the paper to conference audience. Paper documents methodology, results, and future directions for embedded SoC estimation.</p>
+            <div class="proj-timeline__tags">
+              <span class="tool-tag">Research Paper</span>
+              <span class="tool-tag">IC3ECSBHI-2025</span>
+              <span class="tool-tag">Conference Presentation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="specs-section">
+      <div class="specs-inner">
+        <p class="section-label-sm reveal">Key Metrics</p>
+        <h2 class="section-title reveal">Model Performance</h2>
+        <div class="specs-grid">
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="target" width="18" height="18"></i></div>
+            <div class="spec-card__value">1.34%</div>
+            <div class="spec-card__label">Mean Absolute Error</div>
+            <div class="spec-card__sub">vs. 4.8% Coulomb counting</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="bar-chart-2" width="18" height="18"></i></div>
+            <div class="spec-card__value">1.82%</div>
+            <div class="spec-card__label">RMSE</div>
+            <div class="spec-card__sub">UDDS drive cycle</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="layers" width="18" height="18"></i></div>
+            <div class="spec-card__value">4</div>
+            <div class="spec-card__label">Hidden Layers</div>
+            <div class="spec-card__sub">128-64-32-16 neurons</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="clock" width="18" height="18"></i></div>
+            <div class="spec-card__value">&lt;2ms</div>
+            <div class="spec-card__label">Inference Time</div>
+            <div class="spec-card__sub">BMS-deployable latency</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="database" width="18" height="18"></i></div>
+            <div class="spec-card__value">50k+</div>
+            <div class="spec-card__label">Training Samples</div>
+            <div class="spec-card__sub">NASA & CALCE datasets</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="book-open" width="18" height="18"></i></div>
+            <div class="spec-card__value">2025</div>
+            <div class="spec-card__label">Publication Year</div>
+            <div class="spec-card__sub">IC3ECSBHI International Conference</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="proj-footer">
+    <div class="proj-footer__inner">
+      <span class="proj-footer__text">© 2026 Saif Ur Rahman Khan</span>
+      <div class="proj-footer__links">
+        <a href="project-hybrid-microgrid.html">← Previous Project</a>
+        <a href="project-solar-microgrid.html">Next Project →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    themeBtn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      lucide.createIcons();
+    });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slide-dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const currentSlideEl = document.getElementById('currentSlide');
+    const progressFill = document.getElementById('progressFill');
+    let current = 0;
+    const total = slides.length;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      slides[current].classList.add('exit');
+      const prev = current;
+      setTimeout(() => slides[prev].classList.remove('exit'), 600);
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      currentSlideEl.textContent = current + 1;
+      progressFill.style.width = ((current + 1) / total * 100) + '%';
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    nextBtn.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { if (current < total - 1) goTo(current + 1); }
+      if (e.key === 'ArrowLeft') { if (current > 0) goTo(current - 1); }
+    });
+
+    // Mode toggle
+    const modeSlides = document.getElementById('modeSlides');
+    const modePdf = document.getElementById('modePdf');
+    const summaryView = document.getElementById('summaryView');
+    const pdfView = document.getElementById('pdfView');
+    modeSlides.addEventListener('click', () => {
+      modeSlides.classList.add('active'); modePdf.classList.remove('active');
+      summaryView.classList.remove('hidden'); pdfView.classList.remove('active');
+    });
+    modePdf.addEventListener('click', () => {
+      modePdf.classList.add('active'); modeSlides.classList.remove('active');
+      summaryView.classList.add('hidden'); pdfView.classList.add('active');
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

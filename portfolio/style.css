@@ -542,6 +542,22 @@ section {
   letter-spacing: 0.03em;
 }
 
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-lg);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap var(--duration) var(--ease-out), color var(--duration);
+}
+.project-card__link:hover {
+  gap: 10px;
+  color: var(--accent-hover);
+}
+
 .placeholder-badge {
   display: inline-block;
   font-size: 0.65rem;
