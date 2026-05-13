@@ -1,0 +1,120 @@
+﻿SAIF UR RAHMAN KHAN                 
++91-7389426580 | khansaif989341@gmail.com | LinkedIn | GitHub | Google scholar | Research Gate | ORCID | Portfolio
+EDUCATION
+Jamia Millia Islamia (JMI), New Delhi                                                                                                       Nov 2021 - May 2025
+Bachelor of Technology (Electrical Engineering)                          CGPA 8.5/10
+RD Public School, Betul, Madhya Pradesh                                                                                                 Apr 2020 - May 2021
+12th (Senior Secondary)                                       Percentage - 94.8%
+RD Public School, Betul, Madhya Pradesh                                                                                                  Apr 2018 - Feb 2019
+10th (Matriculation)                                                                                                             Percentage - 92.2%
+RESEARCH INTERESTS
+Renewable Energy, E-mobility, Digital Twins for Hybrid Micro-grids, Off-grid Energy Systems, Techno-economic Study of Hybrid Renewable Energy Systems, Vehicle-to-X 
+RELEVANT COURSEWORK
+Engineering Economics and Industrial Management, Renewable Energy Sources, Utilization of electrical energy, Power Electronics, Power System analysis, Electrical power generation, Advanced Control system, Supervisory Control and Data Acquisition (SCADA) & Smart Grid Technologies, Power system operation and control, Programing languages, Soft Computing 
+RESEARCH EXPERIENCE
+Jamia Millia Islamia University, New Delhi                                                                                         May 2023 - May 2025
+Smart Energy Lab, Supervisor: Prof. Majid Jamil
+Undergraduate Thesis – Design and Development of Hydrogen Fuel Cell Based Electric Bicycle.Key roles: 
+Designed and developed a hydrogen PEMFC-hybrid electric bicycle by integrating a 200W Ecosense PEM fuel cell with a 36V/10.4Ah Li-ion battery and 350W BLDC hub motor, extending the hybrid range up to 100 – 120 km from a baseline of 25–30 km
+Analyzed PEM fuel cell V-I characteristics to identify the Maximum Power Point (MPP), optimizing energy extraction efficiency for the integrated hybrid powertrain
+Developed a DC-DC converter circuit (36V → 12V) to manage the hybrid charging profile between the fuel cell and lithium-ion battery
+Fabricated the e-bike prototype by modifying a standard pedal bicycle frame, integrating the wiring harness, throttle, cruise control, real-time SOC display, lights, and horn
+Modelled a 3D SolidWorks replica of the hydrogen fuel cell bicycle to validate compact component placement and structural layout
+Conducted performance road tests achieving 25–30 km/h top speed, 7-9 km dual-load range and characterized the Eco sense 150W PEMFC at 36V/4.2A with 3 NL/min hydrogen consumption. Secured ₹20,000 in project funding from the Jamia Engineering Alumni Association for prototype hardware procurement
+Jamia Millia Islamia University, New Delhi                                                                                         May 2023 - May 2025
+Supervisor: Prof. Majid Jamil
+Undergraduate Research Project - Techno-Economic Analysis of Off-Grid Hybrid Renewable Energy-Based Hydrogen Refueling and Power Supply for Remote Indian Villages
+Key roles: 
+Modelled site-specific load demand profiles and renewable resource data (solar irradiance, wind speed) for 3 remote, unelectrified Indian villages in Madhya Pradesh, using real grid-connectivity data.
+Simulated and compared 4 hybrid RE configurations in HOMER Pro (PV+WT+DG+Bat, PV+WT+DG, PV+WT+Bat, PV+WT+HFC), selecting PV+Wind+Hydrogen Fuel Cell as the optimal net-zero, zero-LPSP configuration for all sites
+Achieved Levelized Cost of Energy of $1.25/kWh and LCOH of $3.22/kg with an 80kW PEM electrolyzer + 250kW fuel cell replacing conventional BESS, enabling both power supply and hydrogen refueling from a single system.
+Extended findings into a journal paper currently under writing: "Techno-Economic Analysis of Off-Grid Hybrid Renewable Energy-Based Hydrogen Refueling and Power Supply for Remote Indian Villages" (Co-author: Prof. Majid Jamil)
+Jamia Millia Islamia University, New Delhi                                                                                         May 2023 - May 2025
+Supervisor: Prof. Majid Jamil
+Undergraduate Research Project - Industrial-Scale Green Hydrogen Production Facility (SIH 2024 Hardware Finals) Team Hydro | Ministry of Power, PS Code: 1574
+Key roles: 
+Designed a >50 TPD green hydrogen facility at Ramagundam, Telangana, integrating 530 MW hybrid RE (130MW solar + 400MW wind) with 80 SOEC electrolyzer units targeting LCOH < $2/kg
+Proposed sustainable ammonia via Haber-Bosch as primary storage (300× cheaper lifetime than compressed H₂) and integrated Solhyd panels + low-head water turbine for intermittency compensation
+Built a lab-scale prototype with CSP-driven electrolysis and a 3-stage water purification train (distillation → UV → carbon chamber), presented at SIH 2024 Hardware Finals, KIET Ghaziabad
+Jamia Millia Islamia University, New Delhi                                                                                         May 2023 - May 2025
+Supervisor: Prof. Majid Jamil
+Undergraduate Minor Project - IoT-Based Solar Powered Pumping and Manuring System (DTU-IIF IdeaThon 2024 Winner) Team Agrivolters | JMI
+Key roles: 
+Designed an off-grid solar irrigation system (NPK + moisture sensors, Arduino, GSM, 3HP pump; CAPEX ₹2.2L) automating watering and manure delivery based on real-time soil data
+Modelled a shared-use revenue model (₹8k–10k/month from neighboring farms) enabling farmer ROI in 18–25 months; won ₹10,000 prize at DTU-IIF IdeaThon 2024
+WORK EXPERIENCE
+Denso International India Ltd, Manesar, Gurgaon, Haryana                                                                        Jul 2025 - Present
+Position: R&D Trainee
+Key roles:
+Benchmarked Valeo India's 3-in-1 combo box (PDU + DC-DC Converter + OBC assembly) against Denso's internal design targets, evaluating parameters including power density, thermal performance, and integration architecture.
+Analyzed the impact of Vehicle-to-X (V2X) bi-directional power flow on the switching stress, thermal loading, and reliability of On-Board Charger (OBC) and DC-DC converter power modules in the X-in-1 by Denso Japan.
+Designed current sensor mounting configurations and battery pack structural parts, ensuring compatibility with HEV/BEV platform requirements and safety margins.
+Reviewed and ensured compliance of HEV/BEV electrical systems with Indian automotive standards including AIS-038, IS 17017, and IS 17107.
+Validated current sensor performance through on-site testing at customer facilities including Maruti Suzuki India Ltd (MSIL) and Toyota, documenting measurement results and deviations.
+PUBLICATIONS
+Khan, S. U. R., Ahmad, A., Jamil, M., & Irfan, A. (2025). State-of-charge estimation of Li-Ion battery in electric vehicles using deep neural networks. In 2025 International Conference on Cognitive Computing in Engineering, Communications, Sciences and Biomedical Health Informatics (IC3ECSBHI) (pp. 861–865) IEEE . (Conference Paper)
+https://doi.org/10.1109/IC3ECSBHI63591.2025.10990906 
+INTERNSHIPS
+Jamia Millia Islamia, New Delhi                                                                             Mar 2024-Jun 2024
+Position: Research Intern 
+Control Lab, Supervisor: Dr. Arunesh Kumar Singh
+Project – AI based Smart Eddy Current Energy Absorbing System
+Key roles:
+Developed hardware prototype models of an Eddy Current Braking System (ECBS) using both permanent magnets and electromagnets to study contactless energy absorption mechanisms
+Implemented Fuzzy Logic Controllers (FLC) in the simulation model to handle system uncertainties and improve robustness of the braking control response
+Applied AI-based smart analysis to perform real-time decision-making and optimize the rate of energy absorption based on speed and load conditions
+Investigated the application of eddy current-based Energy Absorbing Systems (EAS) as a replacement for conventional hydraulic absorbers in Aircraft Arrester Barrier Systems (AABS). Validated experimentally that braking torque is directly proportional to induced eddy current, confirming theoretical models referenced earlier.
+Tata Power DDL, New Delhi                                                                                                                           Jun 2024 - Jul 2024
+Position: Summer Research Intern 
+Project: Predictive Model for Smart Meters integrated with Rooftop Photovoltaic
+Key roles:
+Collected and pre-processed historical smart meter data including hourly load profiles, voltage levels, and energy consumption patterns across residential distribution feeders
+Developed a machine learning-based predictive model to forecast net grid consumption by integrating rooftop PV generation data, improving demand forecasting accuracy
+Analyzed the impact of rooftop solar penetration on feeder-level voltage profiles and reverse power flow conditions in the Delhi distribution network
+Visualized key performance indicators including generation vs. consumption trends, peak shaving potential, and PV self-consumption ratio using Python-based data dashboards
+Tesla Transformers India Ltd, Bhopal                                                                                                          May 2024 - Jul 2024
+Position: Summer Intern 
+Key roles:
+Studied the design and performance characteristics of Inverter Duty Transformers (IDTs), analyzing K-factor ratings, harmonic distortion tolerance, and thermal derating under non-sinusoidal load conditions
+Explored Agrivoltaics system configurations, examining the co-location of solar PV panels with agricultural land to evaluate energy yield and shading impact on crop productivity
+Processed and visualized field measurement data using Python and Excel, generating comparative performance plots for transformer efficiency, harmonic spectrum, and PV output variation
+Assisted in site measurements and documentation of transformer nameplate parameters, winding configurations, and insulation test records
+SKILLS
+Programming: Python (NumPy, Pandas, Matplotlib, TensorFlow/Keras), MATLAB, Arduino/ESP32 (embedded C)
+Hardware: BLDC Hub Motors, PEM Fuel Cells, Li-ion Battery Systems, DC-DC Buck Converters, On-Board Charger (OBC) & PDU Systems, Current Sensors, IoT Sensors & Microcontrollers, Electrolyzer Systems (SOEC/PEMFC), Eddy Current Braking Systems, Inverter Duty Transformers
+Software: Siemens NX, AutoCAD Electrical, Denso internal Automotive Design & BOM Documentation Tools, HOMER Pro (Hybrid Energy Optimization), SolidWorks (3D Modelling), MATLAB Simulink, LaTeX, PVSyst, MS Office Suite, Google Collab, GitHub, Power BI, SQL
+CERTIFICATIONS
+Hydrogen for the Energy Transition: Power-to-X                                                                                                        Mar 2025WWF Germany (WWF Akademie) — OnlineSkills: Power-to-X (PtX), Fischer-Tropsch Synthesis, Green Hydrogen
+Renewable Energy Technologies                                                                                                                                      Oct 2024                                                                                  ASSET EnergyTransition — OnlineSkills: Renewable Energy Systems, Solar Energy, Energy Transition
+Learning SCADA: Collect, Analyze, and Visualize Data for Industrial Automation                                                 Sep 2024
+LinkedIn Learning — OnlineSkills: SCADA, Industrial Automation, Data Visualization
+LEADERSHIP EXPERIENCE / EXTRA CURRICULAR ACTIVITIES
+Chairperson, Power and Energy Sub-Society - JMI Student Branch, New Delhi - Led the Power & Energy sub-society, organizing technical sessions, workshops, and industry talks for undergraduate students.                        Feb 2024 – Feb 2025                                                                                                                              
+R&D Team Member - ENACTUS Jamia Millia Islamia - Contributed to health-focused social entrepreneurship projects, combining engineering solutions with community outreach under the ENACTUS framework.               Jun 2024 – May 2025
+Field Volunteer — Aashman Foundation - Actively volunteered in social service initiatives, supporting underprivileged communities through field-level outreach programmes over 2+ years.                                                     Aug 2023 – Mar 2026
+Solar Charging Seminar - Delivered a seminar on Solar Charging Stations for EVs, reviewing grid-tied and off-grid architectures, battery swapping methods, and proposing a model framework covering PV sizing, storage, grid integration, and safety compliance for Indian EV infrastructure.                                                                                                    May 2024
+AWARDS /ACHIEVEMENTS 
+Winner, DTU-IIF IdeaThon 2024 - Won ₹10,000 prize for an Agri-Voltaic solar-powered IoT irrigation and manuring system project.                                                                                                                                                               Aug 2024
+SIH 2024 Hardware Edition Finalist - Selected for Smart India Hackathon 5-days finale (Hardware Edition) at KIET Ghaziabad, U.P. for the Industrial-Scale Green Hydrogen Production Facility project.                                                Dec 2024                                                                         
+Project Funding Awardee - Received ₹20,000 from Jamia Engineering Alumni Association for the Hydrogen Fuel Cell E-Bike major project                                                                                                                                                      Mar 2025 
+REFERENCES
+Prof. Majid Jamil
+Professor
+Electrical EngineeringJamia Millia Islamia
+New Delhi , India
+mjamil@jmi.ac.in
++91 9313462108
+Prof. Shakeb Ahmad Khan
+Professor
+Electrical Engineering
+Jamia Millia Islamia
+New Delhi , India
+skhan3@jmi.ac.in+91 9650087393
+Prof. Arunesh Kumar Singh
+Associate Professor
+Electrical Engineering
+Jamia Millia Islamia
+New Delhi ., India
+asingh1@jmi.ac.in
++91 9911889119
+
