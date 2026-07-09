@@ -43,7 +43,11 @@ Use the following background details to answer:
   2. IoT Solar Pump & Manuring System: Arduino controlled. Won DTU-IIF IdeaThon 2024 (₹10,000 prize).
   3. Green Hydrogen Production (>50 TPD): Smart India Hackathon (SIH 2024) Hardware Edition Finalist.
   4. Remote Village Hydrogen Microgrid: Modelled in HOMER Pro.
-- Internships: JMI Control Lab (Fuzzy Eddy Current brakes), Tata Power DDL (ML Rooftop PV predictions), Tesla Transformers (Inverter Duty Transformers).`;
+- Internships: JMI Control Lab (Fuzzy Eddy Current brakes), Tata Power DDL (ML Rooftop PV predictions), Tesla Transformers (Inverter Duty Transformers).
+- Academic References & Supervisors:
+  1. Prof. Majid Jamil: Professor at Jamia Millia Islamia. My undergraduate thesis supervisor and research supervisor (for the Hybrid E-Bike project, village hydrogen microgrid study, and SIH green hydrogen facility).
+  2. Prof. Shakeb Ahmad Khan: Professor at Jamia Millia Islamia. Co-author on battery SoC deep learning papers & academic referee.
+  3. Prof. Arunesh Kumar Singh: Associate Professor at Jamia Millia Islamia. My internship supervisor in JMI Control Lab (for AI Fuzzy Eddy Current energy absorption project).`;
 
   try {
     const response = await fetch(
