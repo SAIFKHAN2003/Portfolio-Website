@@ -312,6 +312,11 @@ section {
 .hero h1 {
   margin-bottom: var(--space-lg);
 }
+@media (min-width: 901px) {
+  .hero h1 {
+    white-space: nowrap;
+  }
+}
 
 .hero__subtitle {
   font-size: clamp(1rem, 2vw, 1.2rem);
@@ -467,15 +472,15 @@ section {
   font-weight: 500;
   padding: 6px 14px;
   border-radius: 100px;
-  background: linear-gradient(90deg, rgba(255, 0, 127, 0.1), rgba(112, 0, 255, 0.1));
-  color: #ff80df;
-  border: 1px solid rgba(255, 0, 127, 0.2);
+  background: linear-gradient(90deg, rgba(0, 212, 170, 0.1), rgba(181, 186, 208, 0.1));
+  color: #a3f7e1;
+  border: 1px solid rgba(0, 212, 170, 0.2);
   transition: all var(--duration);
   white-space: nowrap;
 }
 .skill-tag:hover {
-  background: linear-gradient(90deg, rgba(255, 0, 127, 0.2), rgba(112, 0, 255, 0.2));
-  border-color: rgba(112, 0, 255, 0.4);
+  background: linear-gradient(90deg, rgba(0, 212, 170, 0.2), rgba(181, 186, 208, 0.2));
+  border-color: rgba(0, 212, 170, 0.4);
 }
 
 /* ============================================

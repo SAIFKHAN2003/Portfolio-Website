@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hydrogen Fuel Cell E-Bicycle — Saif Ur Rahman Khan</title>
-  <meta name="description" content="Detailed breakdown of the Hydrogen Fuel Cell–Based Electric Bicycle project." />
+  <title>Hydrogen Fuel Cell E-Bicycle | Saif Ur Rahman Khan</title>
+  <meta name="description" content="Detailed breakdown of the Hydrogen Fuel Cell-Based Electric Bicycle project." />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="stylesheet" href="project-style.css" />
 </head>
@@ -83,8 +83,8 @@
 
           <div class="slide slide--cover active">
             <div class="slide-accent-bar"></div>
-            <h2>Hydrogen Fuel Cell–Based<br/>Electric Bicycle</h2>
-            <p>Extending EV range through PEM fuel cell integration — a systems-level approach to clean urban mobility.</p>
+            <h2>Hydrogen Fuel Cell-Based<br/>Electric Bicycle</h2>
+            <p>Extending EV range through PEM fuel cell integration, presenting a systems-level approach to clean urban mobility.</p>
             <div class="slide-number">01 / 06</div>
           </div>
 
@@ -108,9 +108,9 @@
               <h3>Hybrid Powertrain Design</h3>
               <p>A BLDC hub motor is driven by a PWM-controlled ESC. A 48V Li-ion pack provides peak demand, while a PEM fuel cell acts as range extender via a boost DC-DC converter. BMS monitors cell health.</p>
               <div class="slide-bullets">
-                <div class="slide-bullet">BLDC hub motor — 250W, 48V nominal</div>
-                <div class="slide-bullet">PEM fuel cell — 100W auxiliary source</div>
-                <div class="slide-bullet">Boost converter — 24V FC → 48V bus</div>
+                <div class="slide-bullet">BLDC hub motor: 250W, 48V nominal</div>
+                <div class="slide-bullet">PEM fuel cell: 100W auxiliary source</div>
+                <div class="slide-bullet">Boost converter: 24V FC to 48V bus</div>
                 <div class="slide-bullet">BMS with cell balancing & protection</div>
               </div>
             </div>
@@ -131,7 +131,7 @@
             <h3>Design & Simulation Workflow</h3>
             <p>System modelling was performed in MATLAB/Simulink using the Simscape Electrical toolbox. PEM fuel cell polarization curves were parameterized. A Stateflow state machine managed energy routing (FC activates below 40% SoC).</p>
             <div class="slide-bullets" style="margin-top:var(--space-md)">
-              <div class="slide-bullet">Fuel cell I–V & P–V characterization modelled from datasheet parameters</div>
+              <div class="slide-bullet">Fuel cell I-V & P-V characterization modelled from datasheet parameters</div>
               <div class="slide-bullet">Boost converter designed using volt-second balance at 20kHz switching</div>
               <div class="slide-bullet">State machine: FC activates below 40% SoC threshold</div>
               <div class="slide-bullet">Thermal derating model included for Li-ion pack above 45°C</div>
@@ -149,7 +149,7 @@
                 <div class="slide-bullet">Effective range: 45 km → 68 km (+51%)</div>
                 <div class="slide-bullet">Peak battery C-rate reduced by ~22% with FC active</div>
                 <div class="slide-bullet">Total system efficiency: 82.3%</div>
-                <div class="slide-bullet">Zero tailpipe emissions — FC exhaust: water vapour</div>
+                <div class="slide-bullet">Zero tailpipe emissions, with FC exhaust containing water vapour</div>
               </div>
             </div>
             <div class="col-right">
@@ -217,9 +217,9 @@
 
         <div class="proj-timeline__item reveal">
           <div class="proj-timeline__dot"></div>
-          <div class="proj-timeline__phase">Phase 1 — Research</div>
+          <div class="proj-timeline__phase">Phase 1: Research</div>
           <div class="proj-timeline__title">Literature Review & Concept Definition</div>
-          <div class="proj-timeline__duration">Aug 2024 — Sep 2024</div>
+          <div class="proj-timeline__duration">Aug 2024 - Sep 2024</div>
           <div class="proj-timeline__body">
             <p>Reviewed academic literature on PEM fuel cell integration in light EVs and hybrid bicycle platforms. Defined system requirements, target power levels, and performance benchmarks. Evaluated BLDC vs. PMSM motor topologies.</p>
             <div class="proj-timeline__tags">
@@ -232,9 +232,9 @@
 
         <div class="proj-timeline__item reveal">
           <div class="proj-timeline__dot"></div>
-          <div class="proj-timeline__phase">Phase 2 — Design</div>
+          <div class="proj-timeline__phase">Phase 2: Design</div>
           <div class="proj-timeline__title">System Architecture & Component Sizing</div>
-          <div class="proj-timeline__duration">Oct 2024 — Nov 2024</div>
+          <div class="proj-timeline__duration">Oct 2024 - Nov 2024</div>
           <div class="proj-timeline__body">
             <p>Designed hybrid powertrain: Li-ion battery as primary, PEM fuel cell as range extender via boost converter. Sized battery pack (48V, 10Ah), fuel cell (100W), boost converter duty cycle (0.5 at 20kHz), and BMS thresholds using Kirchhoff and volt-second balance equations.</p>
             <div class="proj-timeline__tags">
@@ -247,9 +247,9 @@
 
         <div class="proj-timeline__item reveal">
           <div class="proj-timeline__dot"></div>
-          <div class="proj-timeline__phase">Phase 3 — Simulation</div>
+          <div class="proj-timeline__phase">Phase 3: Simulation</div>
           <div class="proj-timeline__title">MATLAB/Simulink Modelling</div>
-          <div class="proj-timeline__duration">Nov 2024 — Jan 2025</div>
+          <div class="proj-timeline__duration">Nov 2024 - Jan 2025</div>
           <div class="proj-timeline__body">
             <p>Built full system model in MATLAB/Simulink using Simscape Electrical. Parameterized PEM FC from polarization curves. Implemented Stateflow energy management logic. Simulated BLDC torque-speed characteristics under urban, hill-climb, and cruise duty cycles.</p>
             <div class="proj-timeline__tags">
@@ -263,9 +263,9 @@
 
         <div class="proj-timeline__item reveal">
           <div class="proj-timeline__dot"></div>
-          <div class="proj-timeline__phase">Phase 4 — Analysis</div>
+          <div class="proj-timeline__phase">Phase 4: Analysis</div>
           <div class="proj-timeline__title">Performance Evaluation & Optimization</div>
-          <div class="proj-timeline__duration">Jan 2025 — Feb 2025</div>
+          <div class="proj-timeline__duration">Jan 2025 - Feb 2025</div>
           <div class="proj-timeline__body">
             <p>Evaluated simulation outputs against benchmarks. Iterated on energy management SoC thresholds (30% vs 40% vs 50%) to minimize peak discharge. Documented trade-offs between range extension and battery cycle life.</p>
             <div class="proj-timeline__tags">
@@ -278,9 +278,9 @@
 
         <div class="proj-timeline__item reveal">
           <div class="proj-timeline__dot"></div>
-          <div class="proj-timeline__phase">Phase 5 — Documentation</div>
+          <div class="proj-timeline__phase">Phase 5: Documentation</div>
           <div class="proj-timeline__title">Report & Presentation</div>
-          <div class="proj-timeline__duration">Feb 2025 — Mar 2025</div>
+          <div class="proj-timeline__duration">Feb 2025 - Mar 2025</div>
           <div class="proj-timeline__body">
             <p>Compiled full technical report with architecture diagrams, simulation waveforms, efficiency calculations, and comparative analysis. Delivered presentation to academic panel and documented a future HIL hardware prototype roadmap.</p>
             <div class="proj-timeline__tags">
