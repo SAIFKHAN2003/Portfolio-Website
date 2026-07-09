@@ -1147,6 +1147,18 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 
+[data-theme="light"] .skill-tag,
+[data-theme="light"] .tool-tag {
+  color: #00735c;
+  background: rgba(0, 212, 170, 0.08);
+  border-color: rgba(0, 212, 170, 0.25);
+}
+
+[data-theme="light"] .skill-tag:hover {
+  background: rgba(0, 212, 170, 0.15);
+  border-color: rgba(0, 212, 170, 0.45);
+}
+
 /* ============================================
    RESPONSIVE — Tablets (≤ 900px)
    ============================================ */
