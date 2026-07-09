@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { message } = req.body;
+  const { message, ttsEnabled } = req.body;
   if (!message) {
     return res.status(400).json({ error: 'Message is required' });
   }
@@ -80,8 +80,45 @@ Use the following background details to answer:
 
     const data = await response.json();
     const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't process that. Let's chat about my engineering projects!";
+    const trimmedReply = reply.trim();
+
+    let audioBase64 = null;
+    const elApiKey = process.env.ELEVENLABS_API_KEY;
+    const elVoiceId = process.env.ELEVENLABS_VOICE_ID;
+
+    if (ttsEnabled && elApiKey && elVoiceId) {
+      try {
+        const cleanText = trimmedReply.replace(/[🏆#*\[\]\-\(\)]/g, " ");
+        const elResponse = await fetch(
+          `https://api.elevenlabs.io/v1/text-to-speech/${elVoiceId}`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'xi-api-key': elApiKey
+            },
+            body: JSON.stringify({
+              text: cleanText,
+              model_id: 'eleven_flash_v2_5',
+              voice_settings: {
+                stability: 0.5,
+                similarity_boost: 0.75
+              }
+            })
+          }
+        );
+
+        if (elResponse.ok) {
+          const arrayBuffer = await elResponse.arrayBuffer();
+          const buffer = Buffer.from(arrayBuffer);
+          audioBase64 = `data:audio/mpeg;base64,${buffer.toString('base64')}`;
+        }
+      } catch (elError) {
+        console.error("ElevenLabs Error:", elError);
+      }
+    }
     
-    return res.status(200).json({ text: reply.trim() });
+    return res.status(200).json({ text: trimmedReply, audio: audioBase64 });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: 'Failed to generate response' });

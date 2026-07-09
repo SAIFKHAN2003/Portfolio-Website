@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let isTtsEnabled = true;
   let activeUtterance = null;
   let selectedVoice = null;
+  let activeAudio = null;
 
   // Toggle Chat
   chatFab.addEventListener("click", () => {
@@ -93,7 +94,29 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.speechSynthesis) {
       window.speechSynthesis.cancel();
     }
+    if (activeAudio) {
+      activeAudio.pause();
+      activeAudio = null;
+    }
     audioWaves.style.display = "none";
+  }
+
+  function playElevenLabsAudio(url) {
+    stopSpeaking();
+    activeAudio = new Audio(url);
+    activeAudio.onplay = () => {
+      audioWaves.style.display = "flex";
+    };
+    activeAudio.onended = () => {
+      audioWaves.style.display = "none";
+    };
+    activeAudio.onerror = () => {
+      audioWaves.style.display = "none";
+    };
+    activeAudio.play().catch(err => {
+      console.error("Audio playback error:", err);
+      audioWaves.style.display = "none";
+    });
   }
 
   // Add Message to DOM
@@ -105,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollToBottom();
   }
 
-  function addBotMessage(text) {
+  function addBotMessage(text, audioUrl) {
     const bubble = document.createElement("div");
     bubble.className = "chat-bubble chat-bubble--bot";
     chatMessages.appendChild(bubble);
@@ -122,7 +145,11 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(type, speed);
       } else {
         // Trigger voice after text is done typing
-        speak(text);
+        if (audioUrl) {
+          playElevenLabsAudio(audioUrl);
+        } else {
+          speak(text);
+        }
       }
     }
     type();
@@ -169,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ message: text })
+        body: JSON.stringify({ message: text, ttsEnabled: isTtsEnabled })
       });
 
       const data = await response.json();
@@ -177,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok) {
         addBotMessage(data.error || "Sorry, I received an error from the server. Please verify your environment variables.");
       } else {
-        addBotMessage(data.text || "Sorry, I received an empty response. Try again shortly!");
+        addBotMessage(data.text || "Sorry, I received an empty response. Try again shortly!", data.audio);
       }
     } catch (err) {
       console.error(err);
