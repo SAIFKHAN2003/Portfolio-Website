@@ -112,9 +112,30 @@ Use the following background details to answer:
           const arrayBuffer = await elResponse.arrayBuffer();
           const buffer = Buffer.from(arrayBuffer);
           audioBase64 = `data:audio/mpeg;base64,${buffer.toString('base64')}`;
+        } else {
+          const errText = await elResponse.text();
+          console.error("ElevenLabs Failed:", elResponse.status, errText);
+          return res.status(200).json({
+            text: trimmedReply,
+            audio: null,
+            elError: `ElevenLabs failed with status ${elResponse.status}: ${errText}`
+          });
         }
       } catch (elError) {
         console.error("ElevenLabs Error:", elError);
+        return res.status(200).json({ text: trimmedReply, audio: null, elError: elError.message });
+      }
+    } else {
+      // Diagnostic check if ttsEnabled is requested but environment variables are missing
+      if (ttsEnabled) {
+        return res.status(200).json({
+          text: trimmedReply,
+          audio: null,
+          elDebug: {
+            hasApiKey: !!elApiKey,
+            hasVoiceId: !!elVoiceId
+          }
+        });
       }
     }
     

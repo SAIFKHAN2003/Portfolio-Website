@@ -201,6 +201,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await response.json();
       removeTypingIndicator();
+      if (data.elError) {
+        console.warn("ElevenLabs error details:", data.elError);
+      }
+      if (data.elDebug) {
+        console.warn("ElevenLabs environment configuration status:", data.elDebug);
+      }
       if (!response.ok) {
         addBotMessage(data.error || "Sorry, I received an error from the server. Please verify your environment variables.");
       } else {
