@@ -174,7 +174,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await response.json();
       removeTypingIndicator();
-      addBotMessage(data.text || "Sorry, I couldn't reach Saif's database. Try again shortly!");
+      if (!response.ok) {
+        addBotMessage(data.error || "Sorry, I received an error from the server. Please verify your environment variables.");
+      } else {
+        addBotMessage(data.text || "Sorry, I received an empty response. Try again shortly!");
+      }
     } catch (err) {
       console.error(err);
       removeTypingIndicator();
