@@ -65,7 +65,10 @@ Use the following background details to answer:
           },
           generationConfig: {
             maxOutputTokens: 150,
-            temperature: 0.7
+            temperature: 0.7,
+            thinkingConfig: {
+              thinkingBudget: 0
+            }
           }
         }),
       }
