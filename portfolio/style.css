@@ -1063,56 +1063,6 @@ section {
    AESTHETICS - CURSOR & MARQUEE & HORIZONTAL SCROLL
    ============================================ */
 
-/* Custom Cursor */
-@media (pointer: fine) {
-  body, a, button, input, textarea {
-    cursor: none;
-  }
-}
-
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  transition: width 0.2s, height 0.2s, opacity 0.2s;
-  display: none;
-}
-
-.cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(0, 212, 170, 0.5);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9998;
-  transition: width 0.2s, height 0.2s, background-color 0.2s;
-  display: none;
-}
-
-@media (pointer: fine) {
-  .cursor-dot, .cursor-outline { display: block; }
-}
-
-.cursor-hover .cursor-dot {
-  opacity: 0;
-}
-.cursor-hover .cursor-outline {
-  width: 60px;
-  height: 60px;
-  background-color: rgba(0, 212, 170, 0.1);
-  border-color: var(--accent);
-}
 
 /* Marquee */
 .marquee {
