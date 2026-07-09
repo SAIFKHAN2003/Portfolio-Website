@@ -48,10 +48,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function loadVoices() {
     if (!window.speechSynthesis) return;
     const voices = window.speechSynthesis.getVoices();
-    // Try to find a premium/natural English voice, fallback to default
-    selectedVoice = voices.find(v => v.name.includes("Google US English") || v.name.includes("Google UK English Male") || v.name.includes("Microsoft David") || (v.lang.startsWith("en") && !v.name.includes("Zira")));
+    // Prioritize Indian English voices for correct regional name pronunciation
+    selectedVoice = voices.find(v => 
+      v.lang.toLowerCase().replace("_", "-") === "en-in" || 
+      v.name.toLowerCase().includes("india") || 
+      v.name.toLowerCase().includes("heera") || 
+      v.name.toLowerCase().includes("ravi")
+    );
+    // Fallback to general English voices
     if (!selectedVoice) {
-      selectedVoice = voices.find(v => v.lang.startsWith("en"));
+      selectedVoice = voices.find(v => v.name.includes("Google US English") || v.name.includes("Google UK English Male") || v.name.includes("Microsoft David") || (v.lang.toLowerCase().startsWith("en") && !v.name.toLowerCase().includes("zira")));
+    }
+    if (!selectedVoice) {
+      selectedVoice = voices.find(v => v.lang.toLowerCase().startsWith("en"));
     }
   }
 
