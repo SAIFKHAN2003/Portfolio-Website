@@ -163,6 +163,20 @@ document.addEventListener('DOMContentLoaded', () => {
     'section:not(.hero) .gs-reveal'
   );
 
+  // Parallax for blobs
+  gsap.utils.toArray('.blob').forEach(blob => {
+    gsap.to(blob, {
+      yPercent: 40,
+      ease: "none",
+      scrollTrigger: {
+        trigger: blob.parentElement,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  });
+
   revealElements.forEach(el => {
     gsap.fromTo(el,
       { opacity: 0, y: 40 },
@@ -269,5 +283,69 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  /* ------------------------------------------
+     9. CUSTOM CURSOR
+     ------------------------------------------ */
+  const cursorDot = document.getElementById('cursor-dot');
+  const cursorOutline = document.getElementById('cursor-outline');
+  
+  if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
+    window.addEventListener('mousemove', (e) => {
+      const posX = e.clientX;
+      const posY = e.clientY;
+      
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+      
+      cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+      }, { duration: 500, fill: "forwards" });
+    });
+    
+    document.querySelectorAll('a, button, input, textarea, .project-card, .edu-card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        document.body.classList.add('cursor-hover');
+      });
+      el.addEventListener('mouseleave', () => {
+        document.body.classList.remove('cursor-hover');
+      });
+    });
+  }
+
+  /* ------------------------------------------
+     10. GSAP HORIZONTAL SCROLL
+     ------------------------------------------ */
+  if (window.innerWidth > 900) {
+    const horizontalSections = document.querySelectorAll('.horizontal-scroll-section');
+    horizontalSections.forEach(section => {
+      const wrapper = section.querySelector('.horizontal-scroll-wrapper');
+      
+      if (wrapper) {
+        // Calculate scroll width dynamically
+        function getScrollAmount() {
+          let wrapperWidth = wrapper.scrollWidth;
+          return -(wrapperWidth - window.innerWidth);
+        }
+
+        const tween = gsap.to(wrapper, {
+          x: getScrollAmount,
+          ease: "none"
+        });
+
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          end: () => `+=${getScrollAmount() * -1}`,
+          pin: true,
+          animation: tween,
+          scrub: 1,
+          invalidateOnRefresh: true,
+          markers: false
+        });
+      }
+    });
+  }
 
 });

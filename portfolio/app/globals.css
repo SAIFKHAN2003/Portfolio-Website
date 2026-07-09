@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/* ============================================
+   DESIGN SYSTEM — Green Energy × Machine Intelligence
+   ============================================ */
+
+@theme {
+  /* --- Color Palette --- */
+  --color-bg: #0a0f0d;
+  --color-bg-light: #f5f2ec;
+  --color-surface: #111a16;
+  --color-surface-light: #ffffff;
+  --color-surface-alt: #162019;
+  --color-surface-alt-light: #eae6de;
+  --color-border: #1e2e25;
+  --color-border-light: #d4cfc4;
+  --color-text: #e8e4dc;
+  --color-text-light: #1a1f1c;
+  --color-text-muted: #8a9490;
+  --color-text-muted-light: #6b7570;
+  --color-accent: #2dd4a8;
+  --color-accent-light: #0d9373;
+  --color-accent-glow: #1a7a62;
+  --color-accent-glow-light: #b8e8d8;
+  --color-lime: #a3e635;
+  --color-lime-light: #65a30d;
+  --color-amber: #f59e0b;
+  --color-amber-light: #b45309;
+
+  /* --- Typography Scale --- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* --- Spacing --- */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* --- Border Radius --- */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* --- Motion --- */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 600ms;
+  --duration-slower: 800ms;
+
+  /* --- Font Families --- */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), Georgia, "Times New Roman", serif;
+}
+
+/* ============================================
+   CSS CUSTOM PROPERTIES — THEME SWITCHING
+   ============================================ */
+
+:root {
+  --bg: var(--color-bg);
+  --surface: var(--color-surface);
+  --surface-alt: var(--color-surface-alt);
+  --border: var(--color-border);
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-text-muted);
+  --accent: var(--color-accent);
+  --accent-glow: var(--color-accent-glow);
+  --lime: var(--color-lime);
+  --amber: var(--color-amber);
+}
+
+[data-theme="light"] {
+  --bg: var(--color-bg-light);
+  --surface: var(--color-surface-light);
+  --surface-alt: var(--color-surface-alt-light);
+  --border: var(--color-border-light);
+  --text-primary: var(--color-text-light);
+  --text-secondary: var(--color-text-muted-light);
+  --accent: var(--color-accent-light);
+  --accent-glow: var(--color-accent-glow-light);
+  --lime: var(--color-lime-light);
+  --amber: var(--color-amber-light);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.4s var(--ease-smooth), color 0.4s var(--ease-smooth);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+
+section {
+  padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 7rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 9rem 0;
+  }
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent), var(--lime));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(17, 26, 22, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 46, 37, 0.5);
+}
+
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(212, 207, 196, 0.5);
+}
+
+/* ============================================
+   MARQUEE ANIMATION
+   ============================================ */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* ============================================
+   GRID PATTERN BACKGROUND
+   ============================================ */
+
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(45, 212, 168, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 212, 168, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+[data-theme="light"] .grid-pattern {
+  background-image: 
+    linear-gradient(rgba(13, 147, 115, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 147, 115, 0.05) 1px, transparent 1px);
+}
