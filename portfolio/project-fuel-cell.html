@@ -48,12 +48,20 @@
         </div>
       </div>
       <div class="tags-row">
-        <span class="tool-tag">BLDC Motor</span>
-        <span class="tool-tag">PEM Fuel Cell</span>
-        <span class="tool-tag">BMS</span>
-        <span class="tool-tag">Power Electronics</span>
-        <span class="tool-tag">MATLAB/Simulink</span>
-        <span class="tool-tag">DC-DC Converter</span>
+        <span class="tool-tag">350W BLDC Motor</span>
+        <span class="tool-tag">150W PEM Fuel Cell</span>
+        <span class="tool-tag">36V/10.4Ah Li-ion BMS</span>
+        <span class="tool-tag">DC-DC Buck Converter</span>
+        <span class="tool-tag">MATLAB Simulink</span>
+        <span class="tool-tag">SolidWorks 3D</span>
+      </div>
+      <div style="margin-top:var(--space-md);display:flex;gap:12px;flex-wrap:wrap">
+        <a href="Projects/Final_Draft_Major_Thesis[1].pdf" class="doc-btn" target="_blank" rel="noopener">
+          <i data-lucide="file-text" width="15" height="15"></i> View Full Thesis Report (39 Pages PDF)
+        </a>
+        <a href="Projects/Final Major Presentation.pdf" class="doc-btn" target="_blank" rel="noopener">
+          <i data-lucide="presentation" width="15" height="15"></i> View Presentation (33 Slides PDF)
+        </a>
       </div>
     </header>
 
@@ -63,13 +71,13 @@
         <p class="section-label">Project Presentation</p>
         <h2>Technical Slide Deck</h2>
 
-        <!-- Mode Toggle (Hidden as no PDF presentation exists for E-Bike) -->
-        <div class="slide-mode-toggle" style="display:none;">
+        <!-- Mode Toggle (Switch between summary slides and original 33-slide presentation) -->
+        <div class="slide-mode-toggle">
           <button class="slide-mode-btn active" id="modeSlides">
             <i data-lucide="presentation" width="14" height="14"></i> Summary Slides
           </button>
           <button class="slide-mode-btn" id="modePdf">
-            <i data-lucide="file-text" width="14" height="14"></i> Original PPT
+            <i data-lucide="file-text" width="14" height="14"></i> Full Presentation PDF
           </button>
         </div>
 
@@ -105,21 +113,21 @@
             <div class="slide-accent-bar"></div>
             <div class="col-left">
               <span class="slide-title">System Architecture</span>
-              <h3>Hybrid Powertrain Design</h3>
-              <p>A BLDC hub motor is driven by a PWM-controlled ESC. A 48V Li-ion pack provides peak demand, while a PEM fuel cell acts as range extender via a boost DC-DC converter. BMS monitors cell health.</p>
+              <h3>Hybrid Powertrain & Physical Retrofitting</h3>
+              <p>A 350W BLDC hub motor is powered by a 36V/10.4Ah Li-ion battery. A 150W Ecosense PEM fuel cell serves as a continuous range extender via a dedicated DC-DC converter circuit (36V → 12V regulation). Fabricated through physical bicycle frame modification and SolidWorks 3D layout validation.</p>
               <div class="slide-bullets">
-                <div class="slide-bullet">BLDC hub motor: 250W, 48V nominal</div>
-                <div class="slide-bullet">PEM fuel cell: 100W auxiliary source</div>
-                <div class="slide-bullet">Boost converter: 24V FC to 48V bus</div>
-                <div class="slide-bullet">BMS with cell balancing & protection</div>
+                <div class="slide-bullet">BLDC hub motor: 350W, 36V nominal</div>
+                <div class="slide-bullet">PEM fuel cell: 150W Ecosense stack</div>
+                <div class="slide-bullet">DC-DC converter: 36V → 12V regulation</div>
+                <div class="slide-bullet">Wiring harness: throttle, cruise control, real-time SOC display</div>
               </div>
             </div>
             <div class="col-right">
               <div class="stat-list">
-                <div class="stat-item"><div class="stat-item__value">48V</div><div class="stat-item__label">DC Bus Voltage</div></div>
-                <div class="stat-item"><div class="stat-item__value">250W</div><div class="stat-item__label">BLDC Motor Rating</div></div>
-                <div class="stat-item"><div class="stat-item__value">100W</div><div class="stat-item__label">PEM Fuel Cell Output</div></div>
-                <div class="stat-item"><div class="stat-item__value">~87%</div><div class="stat-item__label">Boost Converter Efficiency</div></div>
+                <div class="stat-item"><div class="stat-item__value">36V</div><div class="stat-item__label">DC Bus Voltage</div></div>
+                <div class="stat-item"><div class="stat-item__value">350W</div><div class="stat-item__label">BLDC Motor Rating</div></div>
+                <div class="stat-item"><div class="stat-item__value">150W</div><div class="stat-item__label">PEM Fuel Cell Output</div></div>
+                <div class="stat-item"><div class="stat-item__value">₹20k</div><div class="stat-item__label">Alumni Grant Award</div></div>
               </div>
             </div>
             <div class="slide-number">03 / 06</div>
@@ -128,13 +136,13 @@
           <div class="slide slide--content">
             <div class="slide-accent-bar"></div>
             <span class="slide-title">Methodology</span>
-            <h3>Design & Simulation Workflow</h3>
-            <p>System modelling was performed in MATLAB/Simulink using the Simscape Electrical toolbox. PEM fuel cell polarization curves were parameterized. A Stateflow state machine managed energy routing (FC activates below 40% SoC).</p>
+            <h3>Design, Simulation & Physical Fabrication</h3>
+            <p>Analyzed PEM fuel cell V-I characteristics in MATLAB/Simulink to identify the Maximum Power Point (MPP), optimizing energy extraction efficiency. Modelled a 3D SolidWorks replica to validate compact component placement before physically cutting, retrofitting, and wiring the bicycle frame.</p>
             <div class="slide-bullets" style="margin-top:var(--space-md)">
-              <div class="slide-bullet">Fuel cell I-V & P-V characterization modelled from datasheet parameters</div>
-              <div class="slide-bullet">Boost converter designed using volt-second balance at 20kHz switching</div>
-              <div class="slide-bullet">State machine: FC activates below 40% SoC threshold</div>
-              <div class="slide-bullet">Thermal derating model included for Li-ion pack above 45°C</div>
+              <div class="slide-bullet">Fuel cell polarization and MPP tracking modeled in MATLAB</div>
+              <div class="slide-bullet">SolidWorks 3D mechanical replica to ensure clearance and weight balance</div>
+              <div class="slide-bullet">Hybrid charge controller routing energy between fuel cell and Li-ion pack</div>
+              <div class="slide-bullet">Real-time telemetry integrating voltage, current, and SoC indicators</div>
             </div>
             <div class="slide-number">04 / 06</div>
           </div>
@@ -143,20 +151,20 @@
             <div class="slide-accent-bar"></div>
             <div class="col-left">
               <span class="slide-title">Results & Outcomes</span>
-              <h3>Performance Gains</h3>
-              <p>Integration of the PEM FC demonstrated measurable improvement in total effective range. Hybrid powertrain reduced peak battery discharge rates, extending cell cycle life significantly.</p>
+              <h3>4x Hybrid Range Extension</h3>
+              <p>Achieved a baseline range of 30 km on Li-ion battery power alone. Integrating the 150W PEM fuel cell extended the total operational range up to 100–120 km (a 4x extension), achieving field-test cruise speeds of 25–30 km/h with zero tailpipe emissions.</p>
               <div class="slide-bullets">
-                <div class="slide-bullet">Effective range: 45 km → 68 km (+51%)</div>
-                <div class="slide-bullet">Peak battery C-rate reduced by ~22% with FC active</div>
-                <div class="slide-bullet">Total system efficiency: 82.3%</div>
-                <div class="slide-bullet">Zero tailpipe emissions, with FC exhaust containing water vapour</div>
+                <div class="slide-bullet">Range extension: 30 km → 100–120 km (4x increase)</div>
+                <div class="slide-bullet">Cruising speed: 25–30 km/h under road testing</div>
+                <div class="slide-bullet">Reduced peak discharge stress on Li-ion battery cells</div>
+                <div class="slide-bullet">Secured ₹20,000 project funding from Jamia Alumni Association</div>
               </div>
             </div>
             <div class="col-right">
               <div class="stat-list">
-                <div class="stat-item"><div class="stat-item__value">+51%</div><div class="stat-item__label">Range Extension</div></div>
-                <div class="stat-item"><div class="stat-item__value">82.3%</div><div class="stat-item__label">System Efficiency</div></div>
-                <div class="stat-item"><div class="stat-item__value">−22%</div><div class="stat-item__label">Peak Battery C-rate</div></div>
+                <div class="stat-item"><div class="stat-item__value">4x</div><div class="stat-item__label">Range Extension</div></div>
+                <div class="stat-item"><div class="stat-item__value">120 km</div><div class="stat-item__label">Max Hybrid Range</div></div>
+                <div class="stat-item"><div class="stat-item__value">30 km/h</div><div class="stat-item__label">Field Test Speed</div></div>
                 <div class="stat-item"><div class="stat-item__value">0g</div><div class="stat-item__label">CO₂ Emissions</div></div>
               </div>
             </div>
@@ -201,8 +209,8 @@
 
         <!-- PDF viewer -->
         <div class="pdf-viewer-wrap" id="pdfView">
-          <iframe class="pdf-viewer" src="Projects/Economic%20Analysis%20of%20IoT%20based%20Solar%20powered%20Pumping%20system%20for%20Off-grid%20Rural%20System.pdf" title="Original Presentation"></iframe>
-          <p class="pdf-hint">Use scroll / zoom controls to navigate the presentation</p>
+          <iframe class="pdf-viewer" src="Projects/Final Major Presentation.pdf" title="Original Major Project Presentation (33 Slides)"></iframe>
+          <p class="pdf-hint">Use scroll / zoom controls to navigate the full 33-slide presentation by Saif Ur Rahman Khan &amp; Arslan Ahmad</p>
         </div>
 
       </div>
@@ -302,39 +310,39 @@
         <div class="specs-grid">
           <div class="spec-card reveal">
             <div class="spec-card__icon"><i data-lucide="zap" width="18" height="18"></i></div>
-            <div class="spec-card__value">250W</div>
+            <div class="spec-card__value">350W</div>
             <div class="spec-card__label">BLDC Motor Power</div>
-            <div class="spec-card__sub">48V nominal, hub-drive</div>
+            <div class="spec-card__sub">36V nominal, hub-drive</div>
           </div>
           <div class="spec-card reveal">
             <div class="spec-card__icon"><i data-lucide="battery-charging" width="18" height="18"></i></div>
-            <div class="spec-card__value">10Ah</div>
+            <div class="spec-card__value">10.4Ah</div>
             <div class="spec-card__label">Battery Capacity</div>
-            <div class="spec-card__sub">Li-ion, 48V, ~480Wh</div>
+            <div class="spec-card__sub">Li-ion, 36V, ~374Wh</div>
           </div>
           <div class="spec-card reveal">
             <div class="spec-card__icon"><i data-lucide="wind" width="18" height="18"></i></div>
-            <div class="spec-card__value">100W</div>
+            <div class="spec-card__value">150W</div>
             <div class="spec-card__label">PEM Fuel Cell</div>
-            <div class="spec-card__sub">24V output, range extender</div>
+            <div class="spec-card__sub">Ecosense stack, range extender</div>
           </div>
           <div class="spec-card reveal">
             <div class="spec-card__icon"><i data-lucide="route" width="18" height="18"></i></div>
-            <div class="spec-card__value">68 km</div>
+            <div class="spec-card__value">100-120 km</div>
             <div class="spec-card__label">Extended Range</div>
-            <div class="spec-card__sub">vs. 45 km battery-only</div>
+            <div class="spec-card__sub">4x vs. 30 km battery-only</div>
           </div>
           <div class="spec-card reveal">
-            <div class="spec-card__icon"><i data-lucide="activity" width="18" height="18"></i></div>
-            <div class="spec-card__value">82.3%</div>
-            <div class="spec-card__label">System Efficiency</div>
-            <div class="spec-card__sub">Motor + converter combined</div>
+            <div class="spec-card__icon"><i data-lucide="gauge" width="18" height="18"></i></div>
+            <div class="spec-card__value">25-30 km/h</div>
+            <div class="spec-card__label">Field Test Speed</div>
+            <div class="spec-card__sub">On-road testing velocity</div>
           </div>
           <div class="spec-card reveal">
-            <div class="spec-card__icon"><i data-lucide="cpu" width="18" height="18"></i></div>
-            <div class="spec-card__value">20kHz</div>
-            <div class="spec-card__label">Switching Frequency</div>
-            <div class="spec-card__sub">Boost converter PWM</div>
+            <div class="spec-card__icon"><i data-lucide="award" width="18" height="18"></i></div>
+            <div class="spec-card__value">₹20,000</div>
+            <div class="spec-card__label">Project Grant</div>
+            <div class="spec-card__sub">Jamia Alumni Association</div>
           </div>
         </div>
       </div>

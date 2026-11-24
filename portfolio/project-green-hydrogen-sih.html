@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industrial-Scale Green Hydrogen Facility (>50 TPD) | Saif Ur Rahman Khan</title>
+  <meta name="description"
+    content="Smart India Hackathon 2024 Hardware Finalist: >50 TPD Green Hydrogen Production Facility prototype pairing 80MW SOEC with 530MW hybrid renewable generation." />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="project-style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">Saif<span>.</span></a>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="index.html#projects" class="back-btn">
+          <i data-lucide="arrow-left" width="15" height="15"></i> All Projects
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i data-lucide="moon" width="16" height="16"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="project-hero reveal">
+      <div class="project-hero__category">Green Hydrogen · SOEC Electrolysis · Power-to-X</div>
+      <h1>Industrial-Scale Green Hydrogen Production Facility (&gt;50 TPD)</h1>
+      <div class="project-hero__meta">
+        <div class="meta-item">
+          <span class="meta-item__label">Year</span>
+          <span class="meta-item__value">2024</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Competition</span>
+          <span class="meta-item__value">Smart India Hackathon 2024</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Role</span>
+          <span class="meta-item__value">Team Leader, Team Hydro</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-item__label">Outcome</span>
+          <span class="meta-item__value" style="color:var(--accent)">🏆 National Finalist (Hardware Edition)</span>
+        </div>
+      </div>
+      <div class="tags-row">
+        <span class="tool-tag">SOEC Electrolysis</span>
+        <span class="tool-tag">CSP Heliostats</span>
+        <span class="tool-tag">530MW Hybrid RE</span>
+        <span class="tool-tag">Green Ammonia</span>
+        <span class="tool-tag">Haber-Bosch</span>
+        <span class="tool-tag">UV/Distillation Train</span>
+      </div>
+
+      <div style="margin-top:var(--space-md);display:flex;gap:12px;flex-wrap:wrap">
+        <a href="Projects/SIH2024_IDEA_Presentation.pdf" class="doc-btn" target="_blank" rel="noopener">
+          <i data-lucide="presentation" width="15" height="15"></i> View SIH Presentation (PDF)
+        </a>
+        <a href="Certifications/SIH/SIH Certificate.pdf" class="doc-btn" target="_blank" rel="noopener">
+          <i data-lucide="award" width="15" height="15"></i> View SIH Finalist Certificate
+        </a>
+        <a href="Projects/NBA Visit Presentation.pdf" class="doc-btn" target="_blank" rel="noopener">
+          <i data-lucide="file-text" width="15" height="15"></i> View NBA Poster Presentation
+        </a>
+      </div>
+    </header>
+
+    <!-- SLIDE DECK SECTION -->
+    <section class="slideshow-section">
+      <div class="slideshow-wrapper">
+        <p class="section-label">Project Presentation</p>
+        <h2>Technical Slide Deck</h2>
+
+        <div class="slide-mode-toggle">
+          <button class="slide-mode-btn active" id="modeSlides">
+            <i data-lucide="presentation" width="14" height="14"></i> Summary Slides
+          </button>
+          <button class="slide-mode-btn" id="modePdf">
+            <i data-lucide="file-text" width="14" height="14"></i> Original Presentation PDF
+          </button>
+        </div>
+
+        <!-- Summary Slides -->
+        <div class="summary-view" id="summaryView">
+          <div class="slide-progress">
+            <div class="slide-progress__fill" id="progressFill" style="width:16.67%"></div>
+          </div>
+
+          <div class="slide-deck" id="slideDeck">
+
+            <!-- Slide 1: Cover -->
+            <div class="slide slide--cover active">
+              <div class="slide-accent-bar"></div>
+              <h2>Industrial-Scale Green Hydrogen<br />Production Facility (&gt;50 TPD)</h2>
+              <p>Team Hydro · Ministry of Power, Govt. of India (Problem Statement Code: 1574) · Smart India Hackathon 2024 Hardware Edition National Finalist at KIET Ghaziabad.</p>
+              <div class="slide-number">01 / 06</div>
+            </div>
+
+            <!-- Slide 2: Problem -->
+            <div class="slide slide--content">
+              <div class="slide-accent-bar"></div>
+              <span class="slide-title">Problem Statement &amp; Scope</span>
+              <h3>Decarbonizing Industrial Feedstock at Scale</h3>
+              <p>Green hydrogen production costs remain unviable (&gt;$5/kg) when relying solely on grid power and conventional water electrolysis. The challenge posed by the Ministry of Power was to architect a comprehensive facility producing &gt;50 Metric Tonnes per Day (TPD) of green hydrogen with LCOH &lt; $2/kg.</p>
+              <div class="slide-bullets" style="margin-top:var(--space-md)">
+                <div class="slide-bullet">High CAPEX of high-temperature electrolyzers and intermittency of renewables</div>
+                <div class="slide-bullet">Storage bottlenecks: compressed hydrogen storage is capital intensive</div>
+                <div class="slide-bullet">Water feedstock constraints in dry industrial corridors (Ramagundam, Telangana)</div>
+              </div>
+              <div class="slide-number">02 / 06</div>
+            </div>
+
+            <!-- Slide 3: Architecture -->
+            <div class="slide slide--two-col">
+              <div class="slide-accent-bar"></div>
+              <div class="col-left">
+                <span class="slide-title">System Architecture</span>
+                <h3>Hybrid Renewable &amp; SOEC Integration</h3>
+                <p>Designed a facility in Ramagundam integrating 530 MW of dedicated hybrid renewables (130 MW solar + 400 MW wind) with an 80 MW Solid Oxide Electrolyzer Cell (SOEC) stack. Waste heat from SOEC is recaptured for steam generation, pushing thermodynamic efficiency above 85%.</p>
+                <div class="slide-bullets">
+                  <div class="slide-bullet">80 MW Solid Oxide Electrolyzer Cell (SOEC) operating at 750°C</div>
+                  <div class="slide-bullet">530 MW hybrid wind &amp; solar generation minimizing curtailment</div>
+                  <div class="slide-bullet">Integrated low-head water turbine for short-term intermittency smoothing</div>
+                  <div class="slide-bullet">Target production: 50.8 TPD ultra-pure green H₂</div>
+                </div>
+              </div>
+              <div class="col-right">
+                <div class="stat-list">
+                  <div class="stat-item"><div class="stat-item__value">&gt;50 TPD</div><div class="stat-item__label">Daily Production</div></div>
+                  <div class="stat-item"><div class="stat-item__value">530 MW</div><div class="stat-item__label">Dedicated RE Capacity</div></div>
+                  <div class="stat-item"><div class="stat-item__value">80 MW</div><div class="stat-item__label">SOEC Stack Rating</div></div>
+                  <div class="stat-item"><div class="stat-item__value">&lt; $2/kg</div><div class="stat-item__label">Target LCOH</div></div>
+                </div>
+              </div>
+              <div class="slide-number">03 / 06</div>
+            </div>
+
+            <!-- Slide 4: Storage & Water -->
+            <div class="slide slide--content">
+              <div class="slide-accent-bar"></div>
+              <span class="slide-title">Storage &amp; Water Treatment</span>
+              <h3>Green Ammonia Synthesis &amp; Circular Water Loop</h3>
+              <p>To eliminate high-pressure cryogenic hydrogen transport costs, green hydrogen was converted into green ammonia via Haber-Bosch, achieving a 300× cheaper lifetime storage cost. Wastewater was purified via a continuous 3-stage filtration train (solar distillation → UV sterilization → activated carbon chamber).</p>
+              <div class="slide-bullets" style="margin-top:var(--space-md)">
+                <div class="slide-bullet">Green ammonia storage at ambient temperature and low pressure</div>
+                <div class="slide-bullet">Zero-liquid-discharge (ZLD) wastewater treatment train</div>
+                <div class="slide-bullet">300× lower capital cost per MWh stored vs. compressed gas tanks</div>
+                <div class="slide-bullet">Closed-loop thermal integration utilizing Haber-Bosch exothermic heat</div>
+              </div>
+              <div class="slide-number">04 / 06</div>
+            </div>
+
+            <!-- Slide 5: Hardware Prototype -->
+            <div class="slide slide--two-col">
+              <div class="slide-accent-bar"></div>
+              <div class="col-left">
+                <span class="slide-title">Hardware Prototype</span>
+                <h3>Built On-Site During 5-Day Finale</h3>
+                <p>During the intense 5-day national finale at KIET Ghaziabad, Team Hydro engineered a functional working physical prototype featuring a solar-thermal CSP heliostat array, an alkaline water electrolysis cell, and automated sensor telemetry.</p>
+                <div class="slide-bullets">
+                  <div class="slide-bullet">Dual-axis solar tracking heliostat reflecting concentrated sunlight</div>
+                  <div class="slide-bullet">Alkaline water electrolysis module demonstrating steady gas generation</div>
+                  <div class="slide-bullet">Automated flow, temperature, and current monitoring via Arduino</div>
+                  <div class="slide-bullet">Presented to Ministry of Power jury and industry evaluators</div>
+                </div>
+              </div>
+              <div class="col-right">
+                <div class="stat-list">
+                  <div class="stat-item"><div class="stat-item__value">5 Days</div><div class="stat-item__label">Hackathon Build</div></div>
+                  <div class="stat-item"><div class="stat-item__value">6</div><div class="stat-item__label">Team Engineers</div></div>
+                  <div class="stat-item"><div class="stat-item__value">Top 5</div><div class="stat-item__label">National Finalist</div></div>
+                  <div class="stat-item"><div class="stat-item__value">100%</div><div class="stat-item__label">Hardware Functional</div></div>
+                </div>
+              </div>
+              <div class="slide-number">05 / 06</div>
+            </div>
+
+            <!-- Slide 6: Learnings -->
+            <div class="slide slide--content">
+              <div class="slide-accent-bar"></div>
+              <span class="slide-title">Impact &amp; Recognition</span>
+              <h3>SIH National Recognition</h3>
+              <p>Recognized as National Finalists in Smart India Hackathon 2024 Hardware Edition. Demonstrated that thermal co-generation and circular water purification can bring green hydrogen production down to cost-parity with grey hydrogen.</p>
+              <div class="slide-bullets" style="margin-top:var(--space-md)">
+                <div class="slide-bullet">Official Certificate of Excellence from Ministry of Education &amp; AICTE</div>
+                <div class="slide-bullet">Showcased at Jamia Millia Islamia NBA Reviewing Jury visit</div>
+                <div class="slide-bullet">Validated engineering methodology for multi-GW hydrogen hubs in India</div>
+              </div>
+              <div class="slide-number">06 / 06</div>
+            </div>
+
+          </div>
+
+          <div class="slide-dots" id="slideDots">
+            <button class="slide-dot active" data-slide="0"></button>
+            <button class="slide-dot" data-slide="1"></button>
+            <button class="slide-dot" data-slide="2"></button>
+            <button class="slide-dot" data-slide="3"></button>
+            <button class="slide-dot" data-slide="4"></button>
+            <button class="slide-dot" data-slide="5"></button>
+          </div>
+
+          <div class="slide-controls">
+            <button class="slide-nav-btn" id="prevBtn" disabled>
+              <i data-lucide="arrow-left" width="16" height="16"></i> Previous
+            </button>
+            <span class="slide-counter">Slide <span id="currentSlide">1</span> of 6</span>
+            <button class="slide-nav-btn" id="nextBtn">
+              Next <i data-lucide="arrow-right" width="16" height="16"></i>
+            </button>
+          </div>
+        </div><!-- /.summary-view -->
+
+        <!-- PDF viewer -->
+        <div class="pdf-viewer-wrap" id="pdfView">
+          <iframe class="pdf-viewer" src="Projects/SIH2024_IDEA_Presentation.pdf" title="Original SIH 2024 Presentation"></iframe>
+          <p class="pdf-hint">Use scroll / zoom controls to view the official SIH 2024 presentation deck</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROTOTYPE GALLERY & PROOF -->
+    <section class="specs-section">
+      <div class="specs-inner">
+        <p class="section-label-sm reveal">Photo &amp; Certificate Gallery</p>
+        <h2 class="section-title reveal">SIH 2024 Finale &amp; Prototype Proof</h2>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:var(--space-lg);margin-top:var(--space-xl)">
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border);background:var(--bg-card)">
+            <img src="Certifications/SIH/SIH photos.jpg" alt="Team Hydro at SIH Finale" style="width:100%;height:220px;object-fit:cover" />
+            <div style="padding:var(--space-md)">
+              <h4 style="margin:0 0 6px 0">Team Hydro at KIET Ghaziabad</h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin:0">5-day continuous hardware hacking at the SIH 2024 Hardware Grand Finale.</p>
+            </div>
+          </div>
+
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border);background:var(--bg-card)">
+            <img src="Certifications/SIH/SIH_photos.jpg" alt="Working Prototype Build" style="width:100%;height:220px;object-fit:cover" />
+            <div style="padding:var(--space-md)">
+              <h4 style="margin:0 0 6px 0">Electrolysis &amp; CSP Prototype</h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin:0">Testing the water purification loop and solar-thermal heating stage.</p>
+            </div>
+          </div>
+
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border);background:var(--bg-card);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:var(--space-xl);text-align:center">
+            <i data-lucide="award" width="48" height="48" style="color:var(--accent);margin-bottom:12px"></i>
+            <h4 style="margin:0 0 8px 0">Official SIH Certificate</h4>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px">National Finalist Certificate issued by Ministry of Education Innovation Cell, AICTE, and Ministry of Power.</p>
+            <a href="Certifications/SIH/SIH Certificate.pdf" class="doc-btn" target="_blank" rel="noopener">
+              <i data-lucide="file-check" width="14"></i> Open Certificate (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY SPECS -->
+    <section class="specs-section">
+      <div class="specs-inner">
+        <p class="section-label-sm reveal">Key Metrics</p>
+        <h2 class="section-title reveal">Facility Sizing &amp; Economic Metrics</h2>
+        <div class="specs-grid">
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="flame" width="18" height="18"></i></div>
+            <div class="spec-card__value">&gt;50 TPD</div>
+            <div class="spec-card__label">Daily Production</div>
+            <div class="spec-card__sub">Ultra-pure Green Hydrogen</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="zap" width="18" height="18"></i></div>
+            <div class="spec-card__value">530 MW</div>
+            <div class="spec-card__label">Hybrid RE Capacity</div>
+            <div class="spec-card__sub">130MW Solar + 400MW Wind</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="cpu" width="18" height="18"></i></div>
+            <div class="spec-card__value">80 MW</div>
+            <div class="spec-card__label">SOEC Stack</div>
+            <div class="spec-card__sub">High-temp steam electrolysis</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="dollar-sign" width="18" height="18"></i></div>
+            <div class="spec-card__value">&lt; $2/kg</div>
+            <div class="spec-card__label">Levelized Cost (LCOH)</div>
+            <div class="spec-card__sub">Grid-parity economic target</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="package" width="18" height="18"></i></div>
+            <div class="spec-card__value">300x</div>
+            <div class="spec-card__label">Storage Savings</div>
+            <div class="spec-card__sub">Haber-Bosch green ammonia</div>
+          </div>
+          <div class="spec-card reveal">
+            <div class="spec-card__icon"><i data-lucide="droplet" width="18" height="18"></i></div>
+            <div class="spec-card__value">ZLD</div>
+            <div class="spec-card__label">Zero Liquid Discharge</div>
+            <div class="spec-card__sub">3-stage water purification</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="proj-footer">
+    <div class="proj-footer__inner">
+      <span class="proj-footer__text">© 2026 Saif Ur Rahman Khan</span>
+      <div class="proj-footer__links">
+        <a href="index.html#projects">← Back to Projects</a>
+        <a href="project-solar-microgrid.html">Next Project →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    themeBtn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      lucide.createIcons();
+    });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slide-dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const currentSlideEl = document.getElementById('currentSlide');
+    const progressFill = document.getElementById('progressFill');
+    let current = 0;
+    const total = slides.length;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      slides[current].classList.add('exit');
+      const prev = current;
+      setTimeout(() => slides[prev].classList.remove('exit'), 600);
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      currentSlideEl.textContent = current + 1;
+      progressFill.style.width = ((current + 1) / total * 100) + '%';
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    nextBtn.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { if (current < total - 1) goTo(current + 1); }
+      if (e.key === 'ArrowLeft') { if (current > 0) goTo(current - 1); }
+    });
+
+    // Mode toggle
+    const modeSlides = document.getElementById('modeSlides');
+    const modePdf = document.getElementById('modePdf');
+    const summaryView = document.getElementById('summaryView');
+    const pdfView = document.getElementById('pdfView');
+
+    modeSlides.addEventListener('click', () => {
+      modeSlides.classList.add('active');
+      modePdf.classList.remove('active');
+      summaryView.classList.remove('hidden');
+      pdfView.classList.remove('active');
+    });
+    modePdf.addEventListener('click', () => {
+      modePdf.classList.add('active');
+      modeSlides.classList.remove('active');
+      summaryView.classList.add('hidden');
+      pdfView.classList.add('active');
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>

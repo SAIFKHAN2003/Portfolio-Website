@@ -1,0 +1,5 @@
+*.pptx
+*.tmp
+~$*
+extracted_master_cv.txt
+extracted_europass_cv.txt

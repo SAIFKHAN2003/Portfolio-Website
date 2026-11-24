@@ -867,3 +867,50 @@ p { color: var(--text-secondary); }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Proof Pill Badge & Document Link */
+.proof-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid rgba(0, 212, 170, 0.28);
+  padding: 3px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  margin-left: 6px;
+  vertical-align: middle;
+  line-height: 1.2;
+  transition: all 0.2s var(--ease-out);
+}
+.proof-pill:hover {
+  background: rgba(0, 212, 170, 0.2);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 212, 170, 0.25);
+}
+.doc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all 0.2s var(--ease-out);
+}
+.doc-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
